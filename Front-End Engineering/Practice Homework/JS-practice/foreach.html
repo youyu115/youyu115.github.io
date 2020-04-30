@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="title"></div>
+
+    <script>
+        var title = document.querySelector('.title')
+
+        var array = ["1111", "2222", "3333"]
+
+        //forEach - 針對陣列做處理
+        array.forEach((single_data) =>{
+            title.innerHTML = title.innerHTML + `我的第一組數字: ${single_data} <br>`
+
+            //title.innerHTML = title.innerHTML 可以寫成 
+            //title.innerHTML += (意思一樣)
+             
+        })
+
+    </script>
+</body>
+</html>

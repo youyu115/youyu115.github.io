@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        #jumbotron {
+            width: 100%;
+            height: 100vh;
+            background-image: url(img/morning.jpg);
+            background-size:cover;
+            position: relative;
+            background-attachment: fixed;
+           
+
+        }
+        h1 {
+            margin: 0;
+        }
+
+        .bigtitle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: white;
+            font-size: 60px;
+            border: white double 10px;
+            padding: 15px;
+            letter-spacing: 5px;
+        }
+
+        #text_block {
+            padding: 100px;
+            position: relative;
+            text-align: center;
+            line-height: 20px;
+        }
+
+        #bigimg1 {
+            width: 100%;
+            height: 60vh;
+            background-image: url(img/lunch.jpg);
+            background-size:cover;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        #bigimg2 {
+            width: 100%;
+            height: 60vh;
+            background-image: url(img/party.jpg);
+            background-size:cover;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        .bigtitle2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: white;
+            letter-spacing: 10px;
+
+        }
+
+        #text {
+            padding: 50px;
+            text-align: center;
+            line-height: 20px;
+        }
+
+        #navbar {
+            width: 100%;
+            position: fixed;
+            z-index: 999;
+            background-color: #5555;
+        }
+
+        #logo {
+            width: 80px;
+            float: left;
+            margin: 0;
+        }
+
+      .nav_items {
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+      }
+
+
+      li {
+          display: inline-block;
+          padding: 15px;
+          border-radius: 20px;
+          border: dashed 2px white;
+          margin-right: 50px;
+          color:white;
+          letter-spacing: 5px;
+      }
+    </style>
+</head>
+<body>
+
+    <div id="navbar">
+        <a href="#jumbotron">
+            <img id="logo" src="img/LOGO.png" alt="">
+        </a>
+            <ul class="nav_items">
+                <a href="#text_block"><li>8:00</li></a>
+                <a href="#bigimg1"><li>12:00</li></a>
+                <a href="#bigimg2"><li>9:00</li></a>
+            </ul>
+    </div>
+    <div id="jumbotron">
+        <h1 class="bigtitle" >MORNING</h1>
+    </div>
+    <div id="text_block">
+        <h2>8:00AM</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat qui, mollitia consectetur itaque corrupti odit optio explicabo cumque excepturi minus iusto sunt inventore ea, atque ipsa neque incidunt. Temporibus, eius facilis quo dolor consequuntur pariatur dignissimos omnis mollitia, quas nihil cumque dolore deleniti, magni vero quia! Hic facere exercitationem ea? Ipsam, soluta voluptatem placeat debitis asperiores mollitia tempore id impedit adipisci, qui beatae minima quisquam repudiandae cum molestiae et nisi enim. Labore quaerat nobis esse officia iste, eum, maiores in dolorum minus explicabo alias ullam asperiores ipsa delectus et libero aspernatur amet quae nostrum perferendis repellat! Aspernatur iure voluptate eaque.</p>
+    </div>
+
+    <div id="bigimg1">
+        <h2 class="bigtitle2" >LUNCH&nbsp;&nbsp;TIME<hr></h2>
+    </div>
+    <div id="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta libero hic quibusdam amet eveniet fugit fugiat, sequi asperiores voluptas beatae, ipsum officiis dolores alias! Id cupiditate aliquid sapiente illo mollitia.</div>
+
+
+    <div id="bigimg2">
+        <h2 class="bigtitle2">PARTY&nbsp;&nbsp;TIME<hr></h2>
+    </div>
+    <div id="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta libero hic quibusdam amet eveniet fugit fugiat, sequi asperiores voluptas beatae, ipsum officiis dolores alias! Id cupiditate aliquid sapiente illo mollitia.</div>
+   
+    <div id="jumbotron">
+        <h1 class="bigtitle" >HAVE&nbsp;A&nbsp;GOOD&nbsp;DAY</h1>
+    </div>
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        body {
+            margin: 0;
+        }
+
+        .navbar {
+            width: 300px;
+            height: 100vh;
+            background-color: white;
+            float: left;
+            position: relative;
+        }
+
+        .logo {
+           width: 100px;
+           height: 100px;
+           margin: auto;
+           margin-top: 100px;
+           background-image: url(img/logo.jpg);
+            background-size: cover;
+        }
+
+        ul {
+            padding: 0;
+            margin-top: 50px;
+            text-align: center;   
+        }
+
+        li {
+            list-style: none;
+            padding: 10px;              
+        }
+
+        li:hover {
+            color: peru;           
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .main {
+            width: calc(100% - 300px);
+            height: 100vh;
+            float: left;
+            background-color: rgb(238, 238, 238);
+        }
+
+        .main .block {
+            max-width: 700px;
+            height: 500px;
+            background-color:white;
+            margin: auto;
+            margin-top: calc(50vh - 250px);
+        }
+
+        .box {
+            width: calc((100% - 20px) / 3);
+            height: 100%;
+            background-color: black;
+            float: left;
+        }
+
+        .a {
+            margin-right: 10px;
+            background-image: url(img/3332.jpg);
+            background-position: 50;
+            float: left;
+        }
+
+        .b {
+            margin-right: 10px;
+            background-image: url(img/tur.jpg);
+            background-size: cover;
+            float: left;
+        }
+
+        .c {
+            margin-right: 10px;
+            background-image: url(img/a0fcb6d803c7088bf527701492c552cb.jpg);
+            background-size: cover;
+            margin: 0;
+        }
+    
+    @media screen and (max-width: 1280px) {
+
+        .main .block {
+            max-width: 100%;
+            height: 500px;
+            background-color:white;
+            margin-top: calc(50vh - 250px);
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .a {
+            width: 100%;
+            height: 50%;
+            background-color: black;
+            background-size:cover;
+            margin: 0;
+            margin-bottom: 10px;
+        }
+
+        .b {
+            width: calc(50% - 5px);
+            height: calc(50% - 5px);
+            background-color: black;
+            float: left;
+            margin-right: 10px;
+           
+        }
+    
+        .c {
+            width: calc(50% - 5px);
+            height: calc(50% - 5px);
+            background-color: black;
+            float: right;
+           
+        }
+
+    }
+
+    @media screen and (max-width: 768px) {
+        body {
+            margin: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+        .navbar {
+            width: 100%;
+            height: 80px;
+            background-color: white;
+            position: relative;    
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            margin-top: 10px;
+            margin-left: 20px;
+            float: left;
+        }
+
+        ul { 
+            margin: 0;
+            display: inline-block;
+            position: absolute;
+            top: 25%;
+            right: 20px;
+        }
+
+        li {
+            display: inline-block;
+            margin-left: 30px;
+        }
+
+        .main {
+            margin: 0;
+            width: 100%;
+            float: left;
+            background-color:  rgb(238, 238, 238);
+        }
+        .main .block {
+            width: 90%;
+            height: 710px;
+            background-color:white;
+            margin: auto;
+            margin-top: 120px;
+            position: relative;
+        }
+
+        .a {
+            width: 100%;
+            height: 350px;
+            background-color:black;
+            
+        }
+
+        .b {
+            width: calc(50% - 5px) ;
+            height: 350px;
+            background-color:black;
+            float: left;
+            position: absolute;
+            bottom: 0;
+        }
+
+        .c {
+            width: calc(50% - 5px) ;
+            height: 350px;
+            background-color:black;
+            float: left;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    } 
+
+    @media screen and (max-width: 375px) {
+        .navbar {
+            width: 100%;
+            height: 80px;
+            background-color: white;  
+            position: relative;  
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+                    }
+
+        .items {
+            display: none;
+            
+        }
+
+        .main .block {
+            width: 100%;
+            background-color:white;
+            margin: auto;
+            margin-top: 30px;
+        }
+
+        .block .box {
+            float: inherit;
+            position: inherit;
+        }
+
+        .a {
+            width: 100%;
+            height: 300px;
+            background-color:black;
+            margin: 0;     
+        }
+
+        .b {
+            width: 100%;
+            height: 300px;
+            background-color:black;   
+            margin-top: 10px;        
+        }
+
+        .c {
+            width: 100%;
+            height: 300px;
+            background-color:black; 
+            margin-top: 10px;        
+          
+        }
+        
+    } 
+    </style>
+    <title>Document</title>
+</head>
+<body>
+        <div class="navbar">
+            <div class="logo"></div>
+            <ul class="items" >
+                <a href="https://poplady-mag.com/article/58879/2019%E5%B9%B4%E6%98%AF%E6%99%82%E5%80%99%E5%87%BA%E8%B5%B0-%E4%BE%86%E4%B8%80%E8%B6%9F%E9%96%A8%E8%9C%9C%E4%B9%8B%E6%97%85%E5%90%A7-%E5%A5%B3%E7%94%9F%E4%B8%80%E5%AE%9A%E5%96%9C%E6%AD%A1%E7%9A%845%E5%80%8B%E5%9C%9F%E8%80%B3%E5%85%B6%E5%BF%85%E5%8E%BB%E6%99%AF%E9%BB%9E/"><li>TRIP</li></a>
+                <a href="https://poplady-mag.com/article/63657/%E5%A4%A9%E5%A0%82%E7%B4%9A%E7%BE%8E%E6%99%AF-%E5%A5%B3%E7%94%9F%E5%A4%A2%E6%83%B3%E6%B1%82%E5%A9%9A%E5%9C%B0-%E5%9C%9F%E8%80%B3%E5%85%B6%E6%B4%9E%E7%A9%B4%E9%85%92%E5%BA%97%E5%B8%B6%E4%BD%A0%E9%81%A0%E9%9B%A2%E5%A1%B5%E5%9B%82-%E6%84%9F%E5%8F%97%E5%A5%A2%E8%8F%AF%E8%88%AC%E7%9A%84%E4%BA%AB%E5%8F%97/"><li>HOTEL</li></a>
+                <a href="https://kknews.cc/zh-tw/travel/pv3a3v2.html"><li>HOLIDAY</li></a>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="block">
+                <div class="box a"></div>
+                <div class="box b"></div>
+                <div class="box c"></div>
+            </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            height: 3000px;
+        }
+        .box {
+            width: 50px;
+            height: 50px;
+            background-color: palevioletred;
+            position: fixed;
+            right: 0;
+            bottom: 50px;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>   
+    <a class="btt" href="#" hidden><div class="box">top</div></a>  <!-- hidden可以先把東西隱藏起來 -->
+
+    <script   src="https://code.jquery.com/jquery-3.5.0.min.js"   integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="   crossorigin="anonymous"></script>
+
+    <script>
+        $(window).scroll(function () {
+            var scrollVal = $(this).scrollTop();
+            
+            if(scrollVal >= 500){
+                $('a').show() //JQ才有的函式,顯示標籤
+            }else {
+                $('a').hide()  //JQ才有的函式,隱藏標籤
+            }
+
+
+            //console.log(scrollVal);
+            //可查看捲軸的位置,從top開始計算
+            
+        });
+
+        //$(window)是指整個瀏覽器
+    </script>
+</body>
+</html>

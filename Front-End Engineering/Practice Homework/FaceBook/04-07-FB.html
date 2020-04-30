@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            /* border: solid 1px black; */
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #999;
+        }
+        .warp {
+            width: 800px;
+            height: 300px;
+            margin: auto;
+        }
+
+        .bluebar {
+            width: 800px;
+            background-color: #4267B2;
+        
+        }
+
+        .icon {
+            width: 25px;
+            height: 25px;
+            margin: 5px;
+            vertical-align: middle;
+            margin-left: 15px;
+        }
+
+        input {
+            width: 300px;
+            height: 25px;
+            border-radius: 5px;
+            padding: 5px;
+
+        }
+
+        .photo {
+            width: 800px;
+            height: 200px;
+            background-color: gray;
+            position: relative;
+        }
+
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border: white solid 2px;
+            border-radius: 50px;
+            background-color: rgb(65, 64, 64);
+            position: absolute;
+            left: 15px;
+            bottom: -20px;
+
+        }
+        .bottombar {
+            width: 800px;
+            height: 50px;
+            background-color:white;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="warp">
+        <div class="bluebar">
+            <img class="icon" src="img/icon.png" alt="">
+            <input type="text" placeholder="搜尋人、事、物">
+        </div>
+        <div class="photo">
+            <div class="avatar"></div>
+        </div>
+        <div class="bottombar"></div>
+    </div>
+</body>
+
+</html>

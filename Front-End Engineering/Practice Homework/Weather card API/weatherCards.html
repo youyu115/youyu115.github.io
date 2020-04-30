@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Style>
+        body {
+            margin: 0;
+            background-color: #00A8C2;
+        }
+
+        * {
+            font-family: 微軟正黑體;
+        }
+
+        .time {
+            text-align: center;
+            padding-top: 50px;
+            color: white;
+            letter-spacing: 5px;
+        }
+
+        .cards {    
+            margin: 100px;        
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #F1D51A;
+            border-radius: 10px;
+            padding: 10px;
+            
+        }
+
+        .cards .card {
+            width: calc((100% - 80px) / 4);
+            background: white;
+            margin: 10px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        img {
+            width: 100%
+        }
+
+        .location {
+            text-align: center;
+        }
+    </Style>
+</head>
+
+<body>
+
+    <h1 class="time"></h1>
+    <div class="cards">
+        <!-- <div class="card"> -->
+            <!-- <div class="weatherpic"> -->
+                <!-- <img src="img/陰天.jpg" alt="">
+            </div>
+            <h1 class="location">台中市</h1><hr>
+            <div class="weather">陰天</div>
+            <div class="max_temper">28C</div>
+            <div class="min_temper">20C</div>
+            <div class="description">天氣有點涼,需加件外套</div> -->
+        </div>
+
+    </div>
+
+
+    <script>
+        //告訴網頁去指定網址拿資料回來使用
+        fetch('https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-299DC422-CA2B-4607-9579-BC6B0FFD8D64&format=JSON')
+
+
+
+            //第一個then是先確認,網站是否有回應,若有則回傳資料
+            .then(function (response) {
+                return response.json();
+            })
+            //第二個then是,再把裡面內容去抓回來
+            .then(function (weather_data) {
+                var records = weather_data.records //取得物件的鍵值
+                var weather_cards = document.querySelector('.cards');
+                var locations = weather_data.records.location //取得records裡的location資料
+                //location資料裡,有我們要取得的每單筆資料(ex:天氣/最高最低氣溫/敘述)
+
+                locations.forEach(function (location) {    //用forEach抓出location裡面的資料
+
+
+                    var location_name = location.locationName //地點
+                    var wx = location.weatherElement[0].time[0].parameter.parameterName //天氣
+                    var maxT = location.weatherElement[4].time[0].parameter.parameterName //最高溫度
+                    var minT = location.weatherElement[2].time[0].parameter.parameterName //最低溫度
+                    var CI = location.weatherElement[3].time[0].parameter.parameterName //天氣敘述
+
+                    var wx_vaule = location.weatherElement[0].time[0].parameter.parameterValue //天氣代碼
+                   
+                    if(wx_vaule == 1 ){
+                        var weather_img = 'img/太陽.jpg'
+                    }else if (wx_vaule > 1 && wx_vaule <7 ){
+                        var weather_img = 'img/陰天.jpg'
+                    }else{
+                        var weather_img = 'img/下雨.jpg'
+                    }
+
+                    // console.log(wx_vaule)
+
+
+                    weather_cards.innerHTML += `
+                        <div class="card">
+                            <div class="weatherpic">
+                                <img src="${weather_img}" alt="">
+                            </div>
+                            <h1 class="location">${location_name}</h1><hr>
+                            <div class="weather">${wx}</div>
+                            <div class="max_temper">${maxT}</div>
+                            <div class="min_temper">${minT}</div>
+                            <div class="description">${CI}</div>
+                        </div>  `
+                    })
+
+
+
+
+            });
+
+        var time = document.querySelector('.time')
+        var date = new Date();
+
+        var current_date = date.getFullYear() + '年' + (date.getMonth() + 1) + '月' + date.getDate() + '日' 
+        var current_time = date.getHours() + ':' + date.getMinutes()
+        console.log(current_date);
+        
+        time.innerHTML +=`${current_date}<br>`
+        time.innerHTML +=`${current_time}`
+
+    </script>
+</body>
+
+</html>
