@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstra套件 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- 字體動畫效果 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <!-- hover效果 -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/hover.css/2.3.1/css/hover-min.css">
+    <!-- aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        body {
+            margin: 0;
+        }
+
+        * {
+          font-family: 微軟正黑體;
+        }
+
+        hr{
+          height: 2px;
+          margin: 0;
+          margin-top: 5px;
+        }
+
+        .navbar {
+          padding: 15px 120px 0 120px;
+          font-weight: bolder;
+        }
+
+        .hvr-underline-from-left:before {
+          background-color: #D9B653;
+        }
+
+
+        .carousel-inner img {
+          height: 100vh;
+        }
+
+        .title { 
+            position: absolute;
+            top: 50%;
+            left: 30%;
+            color: white; 
+            letter-spacing: 3px;      
+        }
+
+        #homepage .animated01 {
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            /* 定義動畫重複的次數。使用 infinite 來讓動畫永遠重複播放。 */
+        }
+
+        #homepage .animated05 {
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            /* 定義動畫重複的次數。使用 infinite 來讓動畫永遠重複播放。 */
+        }
+
+        #homepage h1 {
+          font-size: 40pt;
+        }
+
+        #homepage li {
+          margin-left: 12px;
+        }
+
+        #about {
+          padding: 100px;
+        }
+
+        #about .text {
+            color: #4F4E50;
+            letter-spacing: 5px;
+        }
+
+        #about h5 {
+          color: #186574;
+        }
+
+        #about hr {
+          margin: auto;
+          margin-top: 10px;
+        }
+
+        .Paragraph {
+            width: 100%;
+            height: 400px;
+            background-size: cover;
+            background-attachment: fixed;  
+            position: relative;      
+        }
+
+        #spacebanner span {
+          color: #EFDCD1;
+        }
+
+        #spacebanner .text {
+          position: absolute;
+          top: 40%;
+          left: 20%;
+          letter-spacing: 5px;
+          color: #4F4E50;  
+        }
+
+        .spacebg {
+          margin: auto;
+          width: 80%;
+          height: 100%;
+          background-color: #F2F1EF;
+        }
+
+        #spacebanner .spacebg .row {
+          margin-top: 100px;
+        }
+
+        #spacebanner .container {
+          margin: 100px 0;
+        }
+        
+        #spacebanner .odd{
+          box-shadow: -22px 22px 0px 1px #BAA592 ;
+          -webkit-box-shadow: -22px 22px 0px 1px #BAA592 ;
+          -moz-box-shadow: -22px 22px 0px 1px #BAA592;
+          -o-box-shadow: -22px 22px 0px 1px #BAA592;
+        } 
+
+        #spacebanner .even{
+          box-shadow: 22px 22px 0px 1px #BAA592;
+          -webkit-box-shadow: 22px 22px 0px 1px #BAA592;
+          -moz-box-shadow: 22px 22px 0px 1px #BAA592;
+          -o-box-shadow: 22px 22px 0px 1px #BAA592;
+        }
+
+        #classbanner img {
+          padding:150px 0;
+        }
+
+        
+        .InJoyogaclass .row {
+            margin-top: 100px;
+        }
+        
+       .InJoyogaclass .pic {
+           padding: 10px;
+           width: 350px;
+           height: 350px;
+           background-color: black;
+           border-radius: 50%;
+           margin: auto;
+           border: gray 15px solid;
+           background-size: cover;
+       }
+
+       .InJoyogaclass .text {
+           padding: 20px;
+       }
+
+       .InJoyogaclass .text h5 {
+           margin-bottom: 50px;
+           font-weight: bold;
+           letter-spacing: 5px;
+       }
+
+       .InJoyogaclass .row .container {
+           padding-left: 0;
+           padding-right: 0;
+       }
+
+       .InJoyogaclass .card-header {
+           background-color: unset;
+       }
+
+       .InJoyogaclass .btn-link {
+           color: black;
+           font-size: 20px;
+           letter-spacing: 2px;
+       }
+
+       .InJoyogaclass .btn-link:hover {
+         color:#D9B653 ;
+       }
+
+       .InJoyogaclass .Sideline {
+            width: 20%;
+            height: 20px;
+            background-color: #D9B653;
+            margin-right: 8px;
+       }
+
+       .InJoyoga2 {
+         margin-top: 100PX;
+       }       
+
+        #teacher {
+          padding: 100px;
+          background-color: #F2F1EF;
+        }
+
+        #teacher hr {
+          margin: auto;
+          margin-top: 10px;
+        }
+
+        #teacher .card-body,.text-center {
+          letter-spacing: 5px;
+        }
+
+        #teacher .card {
+          /* 把card原本預設的屬性拿掉 */
+          border: 0;
+          background-color: unset;
+        }
+
+        #teacher img {
+          border-radius: 10px;
+        }
+
+        #teacher .container {
+              width: 80%;
+              padding-right: 50px;
+              padding-left: 50px;
+              margin-right: auto;
+              margin-left: auto;
+        }
+
+        #aboutyoga hr {
+          height: 5px;
+          border: 0;
+        }
+
+        .aboutyoga_text {
+          letter-spacing: 5px;
+        }
+
+        .aboutyoga_text h1 {
+          margin-top: 200px;
+        }
+
+        .aboutyoga_text .row {
+          margin: 200px 0;
+        }
+
+        #aboutyoga span {
+          color: gray;
+          font-size: 25px;
+        }
+
+        #aboutyoga .Paragraph_title {
+          position: absolute;
+          top: 40%;
+          letter-spacing:3px;
+          color: #4F4E50;  
+        }
+
+        #news {
+          background-color: #F6F2E7;
+          padding: 100px;
+        }
+
+        #news hr {
+          margin: auto;
+          margin-top: 10px;
+        }
+
+        #FAQS {
+          padding: 100px;
+        }
+
+        #FAQS span {
+          color: #186574;
+          font-weight: bold;
+        }
+
+        #FAQS h3 .container {
+           margin-top: 0;
+           color: #186574;
+           font-weight: bold;
+       }
+
+       #FAQS .Sideline {
+           width: 6px;
+           height: 40px;
+           background-color: #D9B653;
+           float: left;
+           margin-right: 8px;
+       }
+
+       .card-header {
+          background-color: unset;
+          border-bottom: none;
+      }
+
+      #FAQS .even {
+        background-color: #F2F1EF;
+      }
+
+      #FAQS .odd {
+        background-color: #D7D4CE;
+      }
+
+      #FAQS .btn-link {
+        color: black;
+        font-size: 18pt;
+        letter-spacing: 3px;
+        font-weight: bold;
+      }
+
+      #footer h1 {
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% ,-50%);
+        letter-spacing: 5px;
+      }
+
+       .Footer {
+            width: 100%;
+            padding: 80px;
+            background-color: #555;
+            color: white;
+        }
+
+        .icon {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          background-color: #666666;
+          opacity: 50%;
+          margin-right: 10px;
+          color: white;
+        }
+
+        .icon:hover {
+          background-color: #D9B653;
+          opacity: 1;
+        }
+        
+         @media (min-width: 1600px) {
+            .container {
+              width: 1400px;
+            }
+            /* 大於1600px時,會變成width:1400px */
+        }
+
+        @media (min-width: 1800px) {
+            .container {
+              width: 1600px;
+            }
+        }
+
+        @media (min-width: 1920px) {
+            .container {
+              width: 80%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 首頁 -->
+    <div id="homepage">
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top ">
+            <!-- fixed-top 固定在頂部 -->
+            
+                <!-- 放置LOGO -->
+                <a class="navbar-brand" href="#homepage" >
+                  <img src="./img/logo.png" width="180" height="40" alt="">
+                </a>   
+
+                <!-- 這裡的button是在手機板殘會顯示的列表(漢堡條) -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <!-- 選單列表 -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item ">
+                    <a class="nav-link hvr-underline-from-left" href="#about">關於我們</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link hvr-underline-from-left" href="#classbanner">瑜珈課程</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link hvr-underline-from-left" href="#aboutyoga">認識瑜珈</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link hvr-underline-from-left" href="#teacher">師資介紹</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link hvr-underline-from-left" href="#news">活動資訊</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link hvr-underline-from-left" href="#FAQS">FAQs</a>
+                    </li>
+                        
+                </ul>
+                </div>  
+        </nav>
+
+        <!-- 輪播效果 -->
+        <div id="carousel_pic" class="carousel slide" data-ride="carousel">
+            <!-- 這個是下方指示器(OL) -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel_pic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel_pic" data-slide-to="1"></li>
+                <li data-target="#carousel_pic" data-slide-to="2"></li>
+            </ol>
+            <!-- 圖片連結 -->
+            <div class="carousel-inner">
+                <div class="carousel-item active" >
+                <img src="./img/01.jpg" class="d-block w-100 " alt="">
+                </div>
+                <div class="carousel-item">
+                <img src="./img/02.jpg" class="d-block w-100" alt="">
+                </div>
+                <div class="carousel-item">
+                <img src="./img/03.jpg" class="d-block w-100" alt="">
+                </div>
+            </div>
+            <!-- 左右按鈕 -->
+            <a class="carousel-control-prev" href="#carousel_pic" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" ></span>
+                <span class="sr-only"></span>
+            </a>
+            <a class="carousel-control-next" href="#carousel_pic" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" ></span>
+                <span class="sr-only"></span>
+            </a>
+        </div>
+        <!-- title動畫 -->
+        <div class="title">
+            <h5 class="animated05 fadeInDown bounce ">YOGA FORE EVERYONE</h5>
+            <h1 class="animated01 fadeInDown bounce">Welocome to InJoyoga</h1>
+        </div>
+    </div>
+    <!-- 關於我們 -->
+    <div id="about">
+        <div class="container">
+            <div class="text text-center font-weight-bolder" >
+                <p>In Joy Yoga & Enjoy Life 我們在瑜伽裡發現喜悅也在喜悅裡感受瑜伽</p>
+                <h5 class="m-5 font-weight-bold">InJoyoga<hr color="#186574" width="40px"></h5>
+                <p>將帶給大家融合古典印度瑜伽的美好哲學和西方運動科學及心理學的現代瑜伽練習讓大家體驗健康、安全的瑜伽生活感受身、心、靈合一的美好
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- 環境介紹 -->
+    <div id="spacebanner">
+        <!-- Paragraph效果 -->
+        <div class="Paragraph" style="background-image: url(./img/space_banner.jpg);">
+            <div class="container">
+              <div class="text">
+                <h1><span>舒適</span>場地 <span>專業</span>設備</h1>
+                <h6 class="font-weight-bold" style="color: white;" >YOGA SPACE<hr color="#4F4E50" width="25%"></h6>
+                <p class="font-weight-bolder mt-4" >InJoyoga提供舒適放鬆的環境,讓你的瑜伽旅程有全“心”的體驗</p>
+              </div>
+            </div>
+        </div>
+        
+        <!-- 場地左圖右文 -->
+        <div class="spacebg" >
+            <div class="container">
+                <div class="row ">
+                  <div class="col-12 col-xl-6" data-aos="fade-right" data-aos-delay="300">
+                    <img class="img-fluid odd" src="./img/space01.jpg" alt="">
+                  </div>
+                  <div class="col-12 col-xl-6">
+                    <div class="text" data-aos="fade-left" data-aos-delay="300">
+                      <p>每間教室採木質地板與完善空調。教室皆備有國際品牌空氣清新機，搭配上別具巧思的植物，讓您的身心靈得到最佳的放鬆。<hr>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row d-flex flex-row-reverse">
+                   <!-- 在這讓圖片文字做顛倒 -->
+                  <div class="col-12 col-xl-6" data-aos="fade-left" data-aos-delay="400">
+                    <img class="img-fluid even" src="./img/space02.jpg" alt="">
+                  </div>
+                  <div class="col-12 col-xl-6 ">
+                    <div class="text"data-aos="fade-right" data-aos-delay="400">                     
+                      <p>提供舒適悠閒的環境，使人運動完後能夠充份休息與放鬆。<hr>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-xl-6" data-aos="fade-right" data-aos-delay="200">
+                      <img class="img-fluid odd" src="./img/space03.jpg" alt="">
+                    </div>
+                    <div class="col-12 col-xl-6">
+                      <div class="text"data-aos="fade-left" data-aos-delay="300">                        
+                        <p>更衣間+淋浴間，內附門鎖，可同時使用，讓您在愛運動後，也可以舒服的沖澡再回家。<hr></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row flex-row-reverse">
+                    <div class="col-12 col-xl-6 " data-aos="fade-left" data-aos-delay="200">
+                      <img class="img-fluid even" src="./img/space04.jpg" alt="">
+                    </div>
+                    <div class="col-12 col-xl-6">
+                      <div class="text"data-aos="fade-right" data-aos-delay="300">                       
+                        <p>德國製ｍanduka瑜珈墊,為提供最優質瑜伽體驗，本教室不惜重本至採用國 ｍanduka瑜珈墊。<hr>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                
+        </div>           
+          </div>
+
+    </div>
+    <!-- 課程介紹 -->
+    
+    <div id="classbanner">
+        <!-- Paragraph效果 -->
+        <div class="Paragraph" style="background-image: url(./img/classbanner.jpg);">
+          <div class="container">
+            <img class="img-fluid" src="./img/title.png" alt="">
+          </div>
+        </div>
+        
+        <!-- 課程內容 -->
+      <div class="InJoyogaclass">
+        <div class="d-flex align-items-center">
+          <div class="Sideline"></div>
+          <h1 class="font-weight-bolder mr-3">初級課程</h1>
+          <h3 class="font-weight-bolder" style="color: gray;">InJoyoga 1</h3>
+        </div>
+        <div class="container">        
+          <div class="row">
+              <div class="col-12 col-lg-5">
+                  <div class="pic" style="background-image: url(./img/a3f368e2bf9c4bd1752d8d8255cd0027.jpg);">
+                  </div>
+              </div>
+              
+              <div class="col-12 col-lg-7">
+                  <div class="text">
+                      <h5>適合所有程度學員，特別是第一次接觸瑜伽或是需要溫和放鬆或強化身心的您 </h5>
+        
+                      <div class="accordion container word" id="accordionExample">
+                        <!-- 可以再加入container去訂出欄位 -->
+                        <div class="card">
+                          <div class="card-header even" id="headingOne">
+                            <h2 class="mb-0">
+                              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne">
+                                  陰瑜伽  Yin Yoga  ★
+                              </button>
+                            </h2>
+                          </div>
+                      
+                          <div id="collapseOne" class="collapse" data-parent="#accordionExample">
+                            <div class="card-body">
+                              適合所有程度學員，在沈靜的呼吸及正念的覺知之間，利用多種輔具幫助，長時間在動作當中停留，活化身體的結締組織及打開關節的合理活動範圍，增強身心狀態的覺知及能量，平衡較動態陽性的瑜伽練習，在忙碌的生活中找回平靜的身心。                               
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-header odd" id="headingTwo">
+                            <h2 class="mb-0">
+                              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo">
+                                  基礎瑜伽  Yoga Basics  ★  ★
+                              </button>
+                            </h2>
+                          </div>
+                          <div id="collapseTwo" class="collapse" data-parent="#accordionExample">
+                            <div class="card-body">
+                              適合所有程度學員，從瑜伽入門的基本動作及觀念開始，進行仔細的講解及練習，啟動學員對身心的覺知，為未來更安全健康及多元化的瑜伽練習慢慢打好基礎。這堂課不只適合初學者，也非常適合已練習一段時間的學員，讓您對瑜伽能有不斷深化的了解和感受。 
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-header even" id="headingThree">
+                            <h2 class="mb-0">
+                              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree">
+                                  妮古瑪脈輪瑜伽 Lady Niguma’s Series  ★ ★
+                              </button>
+                            </h2>
+                          </div>
+                          <div id="collapseThree" class="collapse" data-parent="#accordionExample">
+                            <div class="card-body">
+                              遵循印度女瑜伽士Lady Niguma所發展出來的練習傳統。這套練習會從人體七大脈輪的海底輪開始，在脈輪冥想及體位法的練習中，把能量往上引導至頂輪，平衡、暢通全身的脈輪能量，適合所有程度學員。     
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  
+              </div>
+          </div>       
+        </div>
+      </div>
+    </div>
+    
+    <!-- 師資 -->
+    <div id="teacher">
+        <h1 class="text-center mt-5 font-weight-bold">師資介紹<hr color="#D9B653" width="30%"></h1>
+        <h2 class="text-center mb-5 font-weight-bold " style="color: gray;">TEACHERS</h2>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-12 col-xl-4">
+              <div class="card">
+                <img src="./img/teacher01.jpg" class="card-img-top" alt="">
+                <div class="card-body">
+                  <h5 class="card-title font-weight-bold mt-3">Kate</h5>
+                  <p class="card-text"> 流動瑜伽 / 陰瑜珈</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-4">
+              <div class="card ">
+                <img src="./img/teacher02.jpg" class="card-img-top" alt="">
+                <div class="card-body">
+                  <h5 class="card-title font-weight-bold mt-3">Morgan</h5>
+                  <p class="card-text">哈達瑜珈 / 熱系列瑜珈</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-4">
+              <div class="card ">
+                <img src="./img/teacher03.jpg" class="card-img-top" alt="">
+                <div class="card-body">
+                  <h5 class="card-title font-weight-bold mt-3">Sofi</h5>
+                  <p class="card-text">伸展瑜珈 / 基礎瑜珈 / 哈達瑜珈</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col-12 col-xl-4">
+              <div class="card ">
+                <img src="./img/teacher04.jpg" class="card-img-top" alt="">
+                <div class="card-body">
+                  <h5 class="card-title font-weight-bold mt-3">Doris</h5>
+                  <p class="card-text">哈達瑜珈 / 全方位塑身 / 基礎瑜珈</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-4">
+              <div class="card ">
+                <img src="./img/teacher05.jpg" class="card-img-top" alt="">
+                <div class="card-body">
+                  <h5 class="card-title font-weight-bold mt-3">River</h5>
+                  <p class="card-text">熱系列瑜珈 /  流暢瑜珈 / 陰瑜珈
+                </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-4">
+              <div class="card ">
+                <img src="./img/teacher06.jpg" class="card-img-top" alt="">
+                <div class="card-body">
+                  <h5 class="card-title font-weight-bold mt-3">Dola</h5>
+                  <p class="card-text">基礎倒立 / 妮古瑪脈輪瑜珈</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- 關於瑜珈 -->
+    <div id="aboutyoga">
+      <!-- Paragraph效果 -->
+      <div class="Paragraph" style="background-image: url(./img/aboutyoga_banner.jpg);">
+        <div class="container">
+          <div class="Paragraph_title">
+            <h1>甚麼是瑜珈?</h1>
+            <h3>ABOUT YOGA</h3>
+            <p>「瑜珈」（Yoga）二字起源於印度梵文「Yuji」，意為「連結」（Yoke）或「聯合」（Union），是為一種重視精神與身體合一的古老運動。結合呼吸練習(pranayama)、冥想(mediation)和不同姿勢(asana)，以助人體放鬆及減少壓力。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="aboutyoga_text">
+        <div class="container">
+          <!-- 標題 -->
+          <h1 class="text-center">YOGA 帶給我們什麼好處? </h1>
+          <h4 class="text-center font-weight-bold" style="color: gray;">Experience the benefits for health, body  mind</h4>
+
+          <!-- 內文 -->
+          <!-- 健康 -->
+          <div class="row">
+            <div class="col-12 col-xl-6">
+              <div class="text" data-aos="fade-up">
+                <h1 class="font-weight-bold">健康 <span>HEALTH</span><hr color="#DDDDDD"></h1>
+                <p>在進行瑜珈的過程中能按摩到內臟器官與腺體並活絡神經系統，強化血液循環、提升新陳代謝以及免疫系統等生理功能 
+                <br><br>
+                而瑜伽呼吸法（Pranayama）是瑜伽裡一種呼吸練習和技巧，注重控制呼吸提升肺活量,同時增強，心臟和肺部健康並且強化呼吸系統。
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- 身體 -->
+          <div class="row d-flex flex-row-reverse">
+            <!-- 在這讓圖片文字做顛倒 -->
+            <div class="col-12 col-xl-6">
+              <div class="text" data-aos="fade-up">
+                <h1 class="font-weight-bold">身體 <span>BODY</span><hr color="#DDDDDD"></h1>
+                <p>追求更完美的體態! 
+                <br>
+                透過各種瑜珈姿勢，來增強肌肉強度並消耗熱量,達到減肥瘦身的效果<br>
+                還能加強體態姿勢與身體的協調性<br>
+                讓你變得更年輕、更健康
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- 心靈 mind -->
+          <div class="row">
+            <div class="col-12 col-xl-6">
+              <div class="text" data-aos="fade-up">
+                <h1 class="font-weight-bold">心靈 <span>MIND</span><hr color="#DDDDDD"></h1>
+                <p>瑜伽帶給你的並不只有外在的改變
+                  他能減輕壓力與舒緩焦慮感並讓心靈變得平靜、讓精神更加集中 
+                <br><br>
+                多項科學研究亦顯示瑜伽的確有效減低皮質醇（Cortisol；一種壓力荷爾蒙）的分泌,這種神經傳導物質通常與抑鬱症相關
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+    </div>
+    <!-- 新活動 -->
+    <div id="news">
+
+      <h1 class="text-center mt-5 font-weight-bold">活動資訊<hr color="#D9B653" width="30%"></h1>
+        <h2 class="text-center font-weight-bold " style="color: #AAAAAA;">NEWS</h2>
+      <h6 class="text-center mb-5 font-weight-bold" >給您不同瑜珈生活體驗</h6>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-xl-4">
+              <div class="card ">
+                <img src="https://geneonline.news/wp-content/uploads/2017/08/sunflower1.png" class="card-img-top" alt="">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-4">
+              <div class="card ">
+                <img src="https://geneonline.news/wp-content/uploads/2017/08/sunflower1.png" class="card-img-top" alt="">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-4">
+              <div class="card ">
+                <img src="https://geneonline.news/wp-content/uploads/2017/08/sunflower1.png" class="card-img-top" alt="">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- 問答 -->
+    <div id="FAQS">
+        <h1 class="container" >
+            <div class="Sideline"></div>常見問題</h1>
+        <h3 class="container mb-5"><span>FAQS</span></h3>
+        <div class="accordion container" id="accordionExample">
+            <!-- 可以再加入container去訂出欄位 -->
+            <div class="card">
+              <div class="card-header even" id="headingOne">
+                <h2 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne">
+                    上課前該準備甚麼?
+                  </button>
+                </h2>
+              </div>
+          
+              <div id="collapseOne" class="collapse show" data-parent="#accordionExample">
+                <div class="card-body">
+                    1.上課前兩小時，應避免飲食。<br>
+                    2.學員應於上課前十五分鐘到達會館，完成更衣、私人物品放置等準備。<br>
+                    3. 學員應將鞋子留在鞋櫃，或至櫃台索取塑膠袋後，置入臨時置物櫃。<br>
+                    4. 為尊重老師及其他學員的權益，開課後不能進入教室，且應將手機關機或改為震動。<br>
+                    5.不得攜帶食物進入教室
+                    
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header odd" id="headingTwo">
+                <h2 class="mb-0">
+                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo">
+                    初學者注意事項
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseTwo" class="collapse" data-parent="#accordionExample">
+                <div class="card-body">
+                    空腹進行： 瑜伽對於訓練者的飲食沒有特別規定，但是如同其他運動一樣，也為避免進行瑜珈時感到沉重和懶散，在練習瑜珈前、後一個小時內不要用餐。
+                    <br><br>
+                    暖身： 暖身是非常重要的環節，不要才開始就挑戰高難度動作，以免造成運動傷害，最好循序漸進先做一些瑜珈暖身動作，可以避免身體受傷。
+                    <br><br>             
+                    放鬆身心： 練習瑜珈時將心情儘量放鬆，過程中可容許身體有一些酸痛，但不要過度用力或勉強做動作。
+                    <br><br>
+                    專注進行： 練習時不要大笑或說話，要專注地呼吸，保持有規律、較深沉的呼吸，有助身體放鬆。
+                    <br><br>
+                    規律練習： 一週建議要練習三次以上的瑜珈，才能讓身體心更加達到平衡。記得做完一個完整瑜珈動作後要躺下來好好休息，讓身體慢慢記憶練習成果及好好的自行修復。
+                    <br><br>
+                    選擇合適的空間： 進行瑜珈時應該選擇在安靜、通風良好的環境內練習，也可以在室外練習，像是花園，但是不要在大風、寒冷或不潔的、有煙味的空氣中練習，也要避免靠近火爐或妨礙練習的任何場所，以免發生意外，尤其在做頭手倒立時，不要在大型傢俱下練習。  
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header even" id="headingThree">
+                <h2 class="mb-0">
+                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree">
+                    會員付費方案
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseThree" class="collapse" data-parent="#accordionExample">
+                <div class="card-body">
+                    長期方案 主要有2種。
+                    <br><br>
+                    A 會籍方案
+                    #所有會籍採不限堂數上課
+                    #課表內課程都能點選上課
+                    <br><br>                
+                    會籍採月扣制，大約一個月在3000元左右。根據選擇的期間長短有不同價格。
+                    <br><br>                
+                    B 點數方案
+                    #每堂課使用3-5點
+                    #課表內課程皆能點選上課
+                    •60點 $6500 半年使用期限
+                    •120點 $12000 一年使用期限
+                    •400點 $38000 一年使用期限/可分4人使用
+                    短期方案 視寒、暑假不定期推出及更新。                
+                </div>
+              </div>
+            </div>
+            <div class="card">
+                <div class="card-header odd" id="headingFour">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour">
+                      課程報到
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseFour" class="collapse" data-parent="#accordionExample">
+                  <div class="card-body">
+                    1. 學員應於進入會館時，至櫃檯出示學員卡簽到，並以學員卡換取教室課卡及毛巾使用卡。
+                    <br><br> 
+                    2. 學員若未出示課卡，Yoga Journey 老師得禁止學員進入教室參與課程，於課堂進行中，學員應將教室課卡置於瑜珈墊前方，並於課程結束時，交返老師。
+                    <br><br> 
+                    3. 學員於離開會館時，請將毛巾卡及使用過的毛巾交回櫃台回收，並領回學員卡。
+                  </div>
+                </div>
+              </div>
+          </div>
+    </div>
+    <!-- footer -->
+    <div id="footer">
+        <!-- Paragraph效果 --> 
+        <div class="Paragraph" style="background-image: url(./img/foodter.jpg);">
+        <h1>NEED &nbspMORE &nbspHELP ?</h1>
+        <div class="container d-flex ">
+          <div class="icon ">FB</div>
+          <div class="icon">IG</div>
+          <div class="icon">LINE</div>
+        </div>
+        </div>
+          <div class="Footer text-center" >Copyright©2020</div>
+          <div class="Copyright©2020 text-center" >Copyright©2020</div>
+    </div>
+
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset:30,
+    });
+  </script>
+</body>
+</html>
