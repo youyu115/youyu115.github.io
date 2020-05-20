@@ -1,0 +1,592 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+}
+
+* {
+  font-family: 微軟正黑體;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  font-size: 20px;
+}
+
+#homepage .navbar {
+  padding: 15px 130px 0 130px;
+  font-weight: bolder;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transition: 0.4S;
+  transition: 0.4S;
+  z-index: 9999;
+  color: #4F4E50;
+}
+
+#homepage .navbar .logo {
+  width: 200px;
+  height: 40px;
+  background-image: url(./img/logo01.png);
+  background-size: cover;
+}
+
+#homepage .navbar.sticky {
+  padding: 15px 130px 15px 130px;
+  background-color: #222;
+  color: white;
+}
+
+#homepage .navbar.sticky .logo {
+  background-image: url(./img/logo02.png);
+}
+
+#homepage .navbar .hvr-underline-from-left:before {
+  background-color: #F6D386;
+}
+
+#homepage .navbar .nav-link {
+  color: unset;
+  font-size: 18px;
+}
+
+#homepage .carousel-inner img {
+  height: 100vh;
+}
+
+#homepage .title {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
+  letter-spacing: 4px;
+}
+
+#homepage .title .animated {
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+#homepage h1 {
+  font-size: 40pt;
+}
+
+#homepage li {
+  margin-left: 15px;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+#about {
+  padding: 100px;
+}
+
+#about .text {
+  color: #4F4E50;
+  letter-spacing: 5px;
+  line-height: 40px;
+}
+
+#about h5 {
+  color: #186574;
+  margin: 40px 0;
+}
+
+#about hr {
+  border-top: 0;
+  height: 2px;
+  width: 40px;
+  background-color: #4F4E50;
+}
+
+#space .parallax-window {
+  min-height: 400px;
+  background: transparent;
+  position: relative;
+}
+
+#space .parallax-window span {
+  color: #EFDCD1;
+}
+
+#space .parallax-window .text {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  letter-spacing: 5px;
+  color: #4F4E50;
+}
+
+#space .parallax-window hr {
+  border-top: 0;
+  height: 4px;
+  width: 20%;
+  background-color: white;
+  margin-left: 0;
+}
+
+#space .spacecontent .container {
+  padding: 50px 0 150px 0;
+}
+
+#space .spacecontent .container .row {
+  margin-top: 100px;
+}
+
+#space .spacecontent .container .odd {
+  box-shadow: -22px 22px 0px 1px #BAA592;
+  -webkit-box-shadow: -22px 22px 0px 1px #BAA592;
+  -moz-box-shadow: -22px 22px 0px 1px #BAA592;
+  -o-box-shadow: -22px 22px 0px 1px #BAA592;
+}
+
+#space .spacecontent .container .even {
+  box-shadow: 22px 22px 0px 1px #BAA592;
+  -webkit-box-shadow: 22px 22px 0px 1px #BAA592;
+  -moz-box-shadow: 22px 22px 0px 1px #BAA592;
+  -o-box-shadow: 22px 22px 0px 1px #BAA592;
+}
+
+#space .spacecontent .container .p_center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 50px;
+  color: #4F4E50;
+  letter-spacing: 4px;
+  line-height: 30px;
+}
+
+#space .spacecontent .container hr {
+  border-top: 0;
+  height: 2px;
+  background-color: #4F4E50;
+}
+
+#course .parallax-window {
+  min-height: 400px;
+  background: transparent;
+  position: relative;
+}
+
+#course .parallax-window .coursebenner-title {
+  position: absolute;
+  top: 30%;
+}
+
+#course .coursecontent {
+  overflow: hidden;
+  margin: 100px 0;
+}
+
+#course .coursecontent .Sideline {
+  width: 200px;
+  height: 25px;
+  background-color: #F6D386;
+}
+
+#course .coursecontent h1, #course .coursecontent h3 {
+  font-weight: bold;
+  margin-left: 10px;
+  letter-spacing: 4px;
+}
+
+#course .coursecontent h3 {
+  color: #929292;
+}
+
+#course .coursecontent h3 span {
+  color: #F6D386;
+}
+
+#course .coursecontent .row {
+  margin: 150px 0;
+}
+
+#course .coursecontent .coursepic {
+  padding: 10px;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  margin: auto;
+  border: #F6D386 10px solid;
+  background-size: cover;
+}
+
+#course .coursecontent .text h5 {
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #4F4E50;
+  letter-spacing: 4px;
+  line-height: 30px;
+}
+
+#course .coursecontent .text .accordion {
+  margin: 0;
+  padding: 0;
+}
+
+#course .coursecontent .text .accordion .card-header {
+  background-color: unset;
+}
+
+#course .coursecontent .text .accordion .card-header .btn-link {
+  color: black;
+  font-size: 25px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#course .coursecontent .text .accordion .card-header .btn-link:hover {
+  text-decoration: none;
+  color: #F6D386;
+  background-color: #1A1A1A;
+}
+
+#course .coursecontent .text .accordion .card-header .btn-link span {
+  color: #929292;
+  font-size: 20px;
+}
+
+#course .coursecontent .text .accordion .card-body {
+  letter-spacing: 2px;
+}
+
+#course .schedule {
+  margin-bottom: 150px;
+}
+
+#teacher {
+  padding: 100px 0;
+  background-color: #F2F1EF;
+}
+
+#teacher h1, #teacher h2 {
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+
+#teacher hr {
+  border-top: 0;
+  height: 4px;
+  width: 20%;
+  background-color: #F6D386;
+}
+
+#teacher h2 {
+  color: #929292;
+  margin-bottom: 30px;
+}
+
+#teacher .box {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+#teacher .box .imgbox {
+  position: relative;
+  -webkit-transition: -webkit-transform 2s;
+  transition: -webkit-transform 2s;
+  transition: transform 2s;
+  transition: transform 2s, -webkit-transform 2s;
+}
+
+#teacher .box .imgbox img {
+  width: 100%;
+}
+
+#teacher .box:hover .imgbox {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+#teacher .box .details {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  border-radius: 20px;
+}
+
+#teacher .box .details .content {
+  color: white;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding: 10px;
+}
+
+#teacher .box:hover .details {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+#teacher .text {
+  margin: 30px 0 50px 0;
+}
+
+#teacher .text h5, #teacher .text p {
+  text-align: center;
+  letter-spacing: 4px;
+  font-size: 16px;
+}
+
+#teacher .text h5 {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#aboutyoga .aboutyoga_banner .parallax-window {
+  margin: 0;
+  min-height: 400px;
+  background: transparent;
+  position: relative;
+}
+
+#aboutyoga .aboutyoga_banner .Paragraph_title {
+  position: absolute;
+  top: 40%;
+  letter-spacing: 3px;
+}
+
+#aboutyoga .aboutyoga_banner .Paragraph_title .Sideline {
+  width: 6px;
+  height: 40px;
+  background-color: #186574;
+  float: left;
+  margin-right: 8px;
+}
+
+#aboutyoga .aboutyoga_banner .Paragraph_title h3 {
+  color: #7D5626;
+  margin-bottom: 20px;
+}
+
+#aboutyoga .aboutyoga_title {
+  text-align: center;
+  margin: 100px 0;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+
+#aboutyoga .aboutyoga_title h1 {
+  color: #4F4E50;
+}
+
+#aboutyoga .aboutyoga_title h4 {
+  color: #929292;
+}
+
+#aboutyoga .aboutyoga_content .text {
+  padding: 10px;
+  letter-spacing: 5px;
+}
+
+#aboutyoga .aboutyoga_content .text h1 {
+  margin-top: 200px;
+  font-weight: bold;
+}
+
+#aboutyoga .aboutyoga_content .text span {
+  color: gray;
+  font-size: 25px;
+}
+
+#aboutyoga .aboutyoga_content .text hr {
+  border-top: 0;
+  height: 5px;
+  background-color: #F6D386;
+  margin-left: 0;
+}
+
+#news {
+  background-color: #F6F2E7;
+}
+
+#news h1, #news h2, #news h4 {
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+
+#news h2 {
+  color: #929292;
+}
+
+#news hr {
+  border-top: 0;
+  height: 4px;
+  width: 20%;
+  background-color: #F6D386;
+}
+
+#FAQS {
+  padding: 100px;
+}
+
+#FAQS .Sideline {
+  width: 6px;
+  height: 40px;
+  background-color: #F6D386;
+  float: left;
+  margin-right: 8px;
+}
+
+#FAQS h1 {
+  font-weight: bold;
+}
+
+#FAQS h3 {
+  color: #186574;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+#FAQS .card-header {
+  background-color: unset;
+  border-bottom: none;
+}
+
+#FAQS .even {
+  background-color: #F2F1EF;
+}
+
+#FAQS .odd {
+  background-color: #D7D4CE;
+}
+
+#FAQS .btn-link {
+  color: black;
+  font-size: 18pt;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+#FAQS .FAQS_P {
+  font-size: large;
+  line-height: 30px;
+  letter-spacing: 3px;
+}
+
+#FAQS span {
+  font-weight: bold;
+}
+
+#footer .parallax-window {
+  margin: 0;
+  min-height: 400px;
+  background: transparent;
+  position: relative;
+}
+
+#footer h1 {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  letter-spacing: 5px;
+}
+
+#footer .icon_items {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#footer .icon_items a {
+  text-decoration: none;
+}
+
+#footer .icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 40px;
+  background-color: #1A1A1A;
+  opacity: 0.5;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  line-height: 50px;
+}
+
+#footer .FB:hover {
+  background-color: #4267B2;
+  opacity: 1;
+}
+
+#footer .IG:hover {
+  background-color: #D92E78;
+  opacity: 1;
+}
+
+#footer .LINE:hover {
+  background-color: #00B900;
+  opacity: 1;
+}
+
+#footer .footercontext {
+  width: 100%;
+  padding: 50px;
+  background-color: #1A1A1A;
+  color: white;
+}
+
+#footer .footercontext h2 {
+  letter-spacing: 4px;
+}
+
+#footer .footercontext h2 hr {
+  border-top: 0;
+  height: 3px;
+  background-color: #F6D386;
+}
+
+#footer .footercontext p {
+  letter-spacing: 4px;
+  line-height: 30px;
+  font-size: 15px;
+}
+
+#footer .footercontext span {
+  color: #F6D386;
+}
+
+#footer .Copyright©2020 {
+  width: 100%;
+  padding: 20px;
+  background-color: #4F4E50;
+  text-align: center;
+  color: white;
+  letter-spacing: 4px;
+}
+/*# sourceMappingURL=main.css.map */
