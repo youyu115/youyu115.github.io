@@ -377,7 +377,7 @@ p {
 
 #aboutyoga .aboutyoga_banner .Paragraph_title {
   position: absolute;
-  top: 30%;
+  top: 20%;
   letter-spacing: 3px;
   padding: 0 200px;
 }
@@ -390,6 +390,25 @@ p {
 
 #aboutyoga .aboutyoga_banner .Paragraph_title p {
   color: white;
+}
+
+@media (max-width: 992px) {
+  #aboutyoga .aboutyoga_banner .Paragraph_title {
+    position: absolute;
+    top: 30%;
+    padding: 0 50px;
+  }
+  #aboutyoga .aboutyoga_banner .Paragraph_title P {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  #aboutyoga .aboutyoga_banner .Paragraph_title {
+    position: absolute;
+    top: 20%;
+    padding: 0 20px;
+  }
 }
 
 #aboutyoga .aboutyoga_title {
@@ -414,7 +433,7 @@ p {
 #aboutyoga .yogaanimated .yoga .box {
   position: absolute;
   top: 100px;
-  right: 700px;
+  right: 800px;
 }
 
 #aboutyoga .yogaanimated .yoga .box .pic {
@@ -446,7 +465,7 @@ p {
 #aboutyoga .yogaanimated .yoga .box1 {
   position: absolute;
   top: 600px;
-  left: 200px;
+  right: 1700px;
 }
 
 #aboutyoga .yogaanimated .yoga .box1 .pic {
@@ -509,6 +528,7 @@ p {
 #aboutyoga .aboutyoga_content .text {
   padding: 10px;
   letter-spacing: 5px;
+  z-index: 999999999;
 }
 
 #aboutyoga .aboutyoga_content .text h1 {
@@ -552,6 +572,12 @@ p {
   height: 4px;
   width: 20%;
   background-color: #F6D386;
+}
+
+@media (max-width: 992px) {
+  #news .card {
+    margin-bottom: 20px;
+  }
 }
 
 #news .card-body {
@@ -649,6 +675,16 @@ p {
 
 #footer .icon_items a {
   text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  #footer .icon_items {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
 }
 
 #footer .icon {
