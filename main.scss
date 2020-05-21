@@ -22,7 +22,7 @@ p {
 
 #homepage {
         .navbar {
-            padding: 15px 130px 0 130px;
+            padding: 15px 130px 5px 130px;
             font-weight: bolder;
             position: fixed;
             top: 0;
@@ -33,14 +33,14 @@ p {
             color: #4F4E50;
 
             .logo {
-                width: 200px;
-                height: 40px;
+                width: 150px;
+                height: 30px;
                 background-image: url(./img/logo01.png);
                 background-size: cover; 
             }
 
             &.sticky {
-                padding: 15px 130px 15px 130px;
+                padding: 15px 130px 5px 130px;
                 background-color: #222;
                 color: white;
 
@@ -57,7 +57,7 @@ p {
 
             .nav-link {
                 color:unset;
-                font-size: 18px;
+                font-size: 14px;
                 
             }
         }
@@ -193,7 +193,9 @@ p {
 
         .coursebenner-title {
             position: absolute;
-            top: 30%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
     }
 
@@ -377,6 +379,7 @@ p {
 }
 
 #aboutyoga {
+  margin-bottom: 100px;
  .aboutyoga_banner{
 
     .parallax-window {
@@ -388,20 +391,18 @@ p {
 
     .Paragraph_title {
         position: absolute;
-        top: 40%;
-        letter-spacing:3px; 
+        top: 30%;
+        letter-spacing:3px;
+        padding: 0 200px; 
 
-        .Sideline {
-            width: 6px;
-            height: 40px;
-            background-color:#186574;
-            float: left;
-            margin-right: 8px;
+        h4 {
+            color: #186574;
+            margin-bottom: 20px;
+            font-weight: bold;
         }
 
-        h3 {
-            color: #7D5626;
-            margin-bottom: 20px;
+        p {
+            color: white;
         }
     }
  }
@@ -421,6 +422,103 @@ p {
      }
  }
 
+ .yogaanimated {
+
+    .yoga {
+
+        position: relative;
+         .box {
+            position: absolute;
+            top: 100px;
+            right:700px; 
+    
+            .pic {
+                width: 300px;
+                height: 500px;
+                background-image: url(./img/flower01.png);
+                background-size: cover;
+                position:absolute;
+                top: -15px;
+                left: 380px;
+               
+    
+                animation-duration: 2s;
+                animation-delay: 2s;
+                animation-iteration-count: infinite;
+            }
+    
+            .front {
+                float: right;
+                width: 600px;
+                height: 500px;
+                background-image: url(./img/girl01.png);
+                background-size:cover;
+                background-repeat: no-repeat;
+                position:absolute;
+            }
+         }
+    
+         .box1 {
+            position: absolute;
+            top: 600px;
+            left:200px; 
+    
+            .pic {
+                width: 300px;
+                height: 500px;
+                background-image: url(./img/flower02.png);
+                background-size: cover;
+                position:absolute;
+                top: -25px;
+               
+                animation-duration: 3s;
+                animation-delay: 1s;
+                animation-iteration-count: infinite;
+            }
+    
+            .front {
+                float: right;
+                width: 600px;
+                height: 500px;
+                background-image: url(./img/girl02.png);
+                background-size:cover;
+                background-repeat: no-repeat;
+                position:absolute;
+            }
+         }
+    
+         .box2 {
+            position: absolute;
+            top: 1100px;
+            right:800px; 
+    
+            .pic {
+                width: 300px;
+                height: 500px;
+                background-image: url(./img/flower03.png);
+                background-size: cover;
+                position:absolute;
+                top: -15px;
+                left: 200px;
+               
+    
+                animation-duration: 3s;
+                animation-delay: 1s;
+                animation-iteration-count: infinite;
+            }
+    
+            .front {
+                float: right;
+                width: 600px;
+                height: 500px;
+                background-image: url(./img/girl03.png);
+                background-size:cover;
+                background-repeat: no-repeat;
+                position:absolute;
+            }
+         }
+     }
+ }
 
 
  .aboutyoga_content {
@@ -451,6 +549,8 @@ p {
 
 #news {
 
+    padding: 100px;
+
     background-color:#F6F2E7;
     h1,h2,h4 {
         @include title_setting ()
@@ -460,12 +560,31 @@ p {
         color: $color_lightgray;
     }
 
+    h4 {
+        font-size: 15px;
+    }
+
     hr {
         border-top: 0;
         height: 4px;
         width: 20%;
         background-color: #F6D386;
     }
+
+    .card-body {
+        position: relative;
+
+        .card-title {
+            font-weight: bold;
+            font-size: 25px;
+        }
+        .btn {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+    }
+    
 }
 
 #FAQS {
@@ -523,11 +642,12 @@ p {
 }
 
 #footer {
-    .parallax-window {
-        margin: 0;
-        min-height: 400px;
-        background: transparent;
-        position: relative;      
+    .footerpic {
+        width: 100%;
+        height: 400px;
+        background-image: url(./img/foodter.jpg);
+        background-size: cover;
+        position: relative;
     }
 
     h1 {

@@ -16,7 +16,7 @@ p {
 }
 
 #homepage .navbar {
-  padding: 15px 130px 0 130px;
+  padding: 15px 130px 5px 130px;
   font-weight: bolder;
   position: fixed;
   top: 0;
@@ -29,14 +29,14 @@ p {
 }
 
 #homepage .navbar .logo {
-  width: 200px;
-  height: 40px;
+  width: 150px;
+  height: 30px;
   background-image: url(./img/logo01.png);
   background-size: cover;
 }
 
 #homepage .navbar.sticky {
-  padding: 15px 130px 15px 130px;
+  padding: 15px 130px 5px 130px;
   background-color: #222;
   color: white;
 }
@@ -51,7 +51,7 @@ p {
 
 #homepage .navbar .nav-link {
   color: unset;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 #homepage .carousel-inner img {
@@ -182,7 +182,10 @@ p {
 
 #course .parallax-window .coursebenner-title {
   position: absolute;
-  top: 30%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 #course .coursecontent {
@@ -361,6 +364,10 @@ p {
   font-size: 18px;
 }
 
+#aboutyoga {
+  margin-bottom: 100px;
+}
+
 #aboutyoga .aboutyoga_banner .parallax-window {
   margin: 0;
   min-height: 400px;
@@ -370,21 +377,19 @@ p {
 
 #aboutyoga .aboutyoga_banner .Paragraph_title {
   position: absolute;
-  top: 40%;
+  top: 30%;
   letter-spacing: 3px;
+  padding: 0 200px;
 }
 
-#aboutyoga .aboutyoga_banner .Paragraph_title .Sideline {
-  width: 6px;
-  height: 40px;
-  background-color: #186574;
-  float: left;
-  margin-right: 8px;
-}
-
-#aboutyoga .aboutyoga_banner .Paragraph_title h3 {
-  color: #7D5626;
+#aboutyoga .aboutyoga_banner .Paragraph_title h4 {
+  color: #186574;
   margin-bottom: 20px;
+  font-weight: bold;
+}
+
+#aboutyoga .aboutyoga_banner .Paragraph_title p {
+  color: white;
 }
 
 #aboutyoga .aboutyoga_title {
@@ -400,6 +405,105 @@ p {
 
 #aboutyoga .aboutyoga_title h4 {
   color: #929292;
+}
+
+#aboutyoga .yogaanimated .yoga {
+  position: relative;
+}
+
+#aboutyoga .yogaanimated .yoga .box {
+  position: absolute;
+  top: 100px;
+  right: 700px;
+}
+
+#aboutyoga .yogaanimated .yoga .box .pic {
+  width: 300px;
+  height: 500px;
+  background-image: url(./img/flower01.png);
+  background-size: cover;
+  position: absolute;
+  top: -15px;
+  left: 380px;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+#aboutyoga .yogaanimated .yoga .box .front {
+  float: right;
+  width: 600px;
+  height: 500px;
+  background-image: url(./img/girl01.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+#aboutyoga .yogaanimated .yoga .box1 {
+  position: absolute;
+  top: 600px;
+  left: 200px;
+}
+
+#aboutyoga .yogaanimated .yoga .box1 .pic {
+  width: 300px;
+  height: 500px;
+  background-image: url(./img/flower02.png);
+  background-size: cover;
+  position: absolute;
+  top: -25px;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+#aboutyoga .yogaanimated .yoga .box1 .front {
+  float: right;
+  width: 600px;
+  height: 500px;
+  background-image: url(./img/girl02.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+#aboutyoga .yogaanimated .yoga .box2 {
+  position: absolute;
+  top: 1100px;
+  right: 800px;
+}
+
+#aboutyoga .yogaanimated .yoga .box2 .pic {
+  width: 300px;
+  height: 500px;
+  background-image: url(./img/flower03.png);
+  background-size: cover;
+  position: absolute;
+  top: -15px;
+  left: 200px;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+#aboutyoga .yogaanimated .yoga .box2 .front {
+  float: right;
+  width: 600px;
+  height: 500px;
+  background-image: url(./img/girl03.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
 }
 
 #aboutyoga .aboutyoga_content .text {
@@ -425,6 +529,7 @@ p {
 }
 
 #news {
+  padding: 100px;
   background-color: #F6F2E7;
 }
 
@@ -438,11 +543,30 @@ p {
   color: #929292;
 }
 
+#news h4 {
+  font-size: 15px;
+}
+
 #news hr {
   border-top: 0;
   height: 4px;
   width: 20%;
   background-color: #F6D386;
+}
+
+#news .card-body {
+  position: relative;
+}
+
+#news .card-body .card-title {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+#news .card-body .btn {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
 }
 
 #FAQS {
@@ -497,10 +621,11 @@ p {
   font-weight: bold;
 }
 
-#footer .parallax-window {
-  margin: 0;
-  min-height: 400px;
-  background: transparent;
+#footer .footerpic {
+  width: 100%;
+  height: 400px;
+  background-image: url(./img/foodter.jpg);
+  background-size: cover;
   position: relative;
 }
 
