@@ -191,7 +191,7 @@ html {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
   #homepage .banner .title .title_animation .wavy span {
     font-size: 2em;
   }
@@ -366,11 +366,14 @@ html {
 
 @media screen and (max-width: 600px) {
   #work_experience .container {
-    padding: 20px;
+    padding: 30px;
+  }
+  #work_experience .container li {
+    list-style: none;
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
   #work_experience .title {
     font-size: 15px;
   }
@@ -417,7 +420,7 @@ html {
   z-index: -1;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
   #timeline .container h1::after {
     width: 300px;
   }
@@ -513,7 +516,7 @@ html {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
   #timeline .container .items {
     left: 5%;
   }

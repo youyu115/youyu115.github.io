@@ -144,7 +144,7 @@ html {
                             }
                         }
                     }
-                    @media screen and (max-width:400px){
+                    @media screen and (max-width:420px){
                         span {
                             font-size: 2em;
                         }
@@ -308,10 +308,14 @@ html {
     }
     @media screen and (max-width:600px) {
         .container {
-            padding: 20px;
+            padding: 30px;
+
+            li {
+                list-style: none;
+            }
         }
     } 
-    @media screen and (max-width:400px) {
+    @media screen and (max-width:420px) {
         .title {
             font-size: 15px;
         }
@@ -346,7 +350,7 @@ html {
                 transform: translate(-50%);
                 z-index: -1;
             }
-            @media screen and (max-width:400px){
+            @media screen and (max-width:420px){
                 &::after {
                     width: 300px;  
                 }
@@ -435,7 +439,7 @@ html {
                 }
             }
         }
-        @media screen and (max-width:400px) {
+        @media screen and (max-width:420px) {
             .items {
                 left: 5%;
                 .item {
