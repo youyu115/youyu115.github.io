@@ -1,0 +1,46 @@
+
+//字體大小
+$font-title01:50px;
+$font-title02:30px;
+$font-title03:20px;
+$font-p:14px; 
+
+//main顏色
+$color-white:white;
+$color-gray:#F0F0F0;
+$color-lieght-yellow:#FEF0D5;
+$color-yellow:#FCD880;
+$color-lieght-green:#C5D8D4;
+$color-green:#62939A;
+$color-gray:#343535;
+$color-black:#171718;
+
+//NAV顏色
+$nav-color:#171718;
+
+//HOMEPAGE背景顏色
+$homepage-top-BG:#FCD880;
+$homepage-bottom-BG:#C5D8D4;
+
+//experience背景顏色
+$work-experience-BG:#171718;
+$timeline-experience-BG:white;
+
+//skill背景顏色
+$skill-BG:#F0F0F0;
+
+//portfolio背景顏色
+$portfolio-BG:#C5D8D4;
+
+//CONTACT背景顏色
+$contact-BG:#171718;
+
+//footer顏色
+$footer-color:#62939A;
+
+@mixin container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+

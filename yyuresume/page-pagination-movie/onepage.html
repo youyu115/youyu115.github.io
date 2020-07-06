@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+    <style>
+
+        body {
+            margin: 0;
+            background-color: black;
+        }
+
+        * {
+            font-family: 微軟正黑體;
+            text-decoration: none;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1140px;
+            margin: auto;
+        }
+
+        .display-flex {
+            display: flex;
+        }
+
+        .justify-bt {
+            justify-content: space-between;
+        }
+        
+        .content {
+            margin-top: 20px
+        }
+
+        .text-center {
+            text-align: center;           
+        }
+
+        .text-justify {
+            text-align: justify;
+        }
+
+        .a-items-center {
+            align-items: center;
+        }
+
+        .d-row {
+            flex-direction: row-reverse;
+        }
+
+        p {
+            margin: 0;
+            text-align: justify;
+            line-height: 25px; 
+        }
+
+        .letter-spacing {
+            letter-spacing: 4px;
+        }
+
+        .fixed {
+            position: fixed;
+            bottom: 100px;
+            right: 0;
+            width: 50px;
+            background-color: #FAB208;
+            font-size: 15pt;
+            padding: 10px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            font-weight: bold;
+            color:black;
+        }
+
+        .fixed:hover {
+            color: red;
+            padding: 20px;
+            font-size: 25px;
+        }
+
+
+        .navbar {
+            width: 100%;
+            background-color: #FAB208;
+            padding: 10px;
+        }
+
+        .logo {
+            width: 120px;
+            height: 60px;
+            background-image: url(img/maxresdefault01.jpg);
+            background-size: cover;
+        }
+
+        .mobile-toggle {
+            display: none;
+        }
+
+        .mobile_nav_links {
+            display: none;
+        }
+
+        .banner img{
+            width: 100%;
+        }
+
+        .cbanner {
+            width: 100%;
+            height: calc(100vh - 100px);
+            background-image: url(img/1234.jpg);
+            background-size: cover;
+        }
+
+        .btn {
+            background-color: black;
+            color: #FAB208;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .btn:hover {
+            color: white;
+            background-color:#FAB208;
+        }
+        
+        .title {
+            margin: 0;
+            color: white;
+            letter-spacing: 5px;
+        }
+        
+        .c-p {
+            color: white;
+            text-align: center;
+            letter-spacing: 3px; 
+            padding: 50PX;
+        }
+
+        .top {
+            display: flex;
+        }
+
+        .down {
+            display: flex;
+            margin-top: 100px;
+            flex-direction: row-reverse;
+        }
+
+        .ebanner {
+            max-width: 100%;
+            padding: 50px;
+        }
+
+        .ephoto {
+            width: 50%;
+            height: 300px;
+            background-size: cover;
+            background-position: center;    
+        }
+
+        #e p {
+            width: 50%;
+            color: white; 
+        }
+
+        .e-p1 {
+            padding-left: 30px;
+        }
+
+        .e-p2 {
+            padding-right: 30px;
+        }
+
+
+        #a {
+            max-width: 100%;
+            height: 100vh;
+        }
+
+        .a-photo {
+            width: 50%;
+            height: 100%;
+            float: left;
+            display: flex;
+            box-sizing: border-box;
+            background-size: cover;       
+            background-position: center;    
+        }
+
+        .left {
+            background-image: url(img/girl.jpg);     
+        }
+
+        .right {
+            background-image: url(img/door.jpg);
+        }
+
+        .a-content {
+            padding: 70px;
+            display: flex; 
+            align-items: center;
+            color: white;
+        }
+
+        #b {
+            max-width: 100%;
+            height: 100vh;
+            margin: 50px 0;  
+            background-image: url(img/blood.jpg);
+            background-size: cover;         
+        }
+        
+        .bbanner {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;            
+        }
+
+        .b-text {
+            padding-left: 50px;
+            width: 100%;
+            text-align: center;
+            color: white;
+        }
+        
+        @media (max-width: 768px) {   
+        /* 手機板 */
+            
+            .navbar {
+                padding: 10px 0;
+            }
+            
+            .logo {
+                width: 120px;
+                height: 60px;
+                background-image: url(img/maxresdefault01.jpg);
+                background-size: cover;
+                margin: auto;
+            }
+
+            .mobile-toggle {
+                /* 按鈕 */
+                display: block;
+                position: absolute;
+                top: 25px;
+                left: 20px;
+            }
+
+            .mobile_nav_links{
+                width: 100%;
+                height: calc(100vh);
+                background-color:rgba(0, 0, 0, 0.9);
+                position: fixed;
+                top: 0;
+            }
+
+            li {
+                color: white;
+                font-size: 30px;
+                line-height: 50px;
+            }
+
+            .close_nav {
+                color: white;
+                font-size: 40px;
+                padding: 20px;
+            }
+
+            .close_nav:hover {
+                color: #FAB208;
+            }
+
+            li:hover {
+                color: #FAB208;
+            }
+
+            .mobile_nav_links.active {
+                display: block;
+            }
+
+            .banner {
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            .btn {
+                display: none;
+            }
+
+            .cbanner {
+                background-position: center;
+                margin-top: 50PX;
+            }
+
+            .a-photo {
+                width: 100%;  
+            }
+
+            .top {
+                flex-wrap: wrap;
+            }
+
+            .down {
+                flex-wrap: wrap;
+            }
+
+            .ephoto {
+                width: 100%;
+                height: 300px;
+                background-size: cover;
+                background-position: center;    
+            }
+
+            #e p {
+                width: 100%;
+                color: white; 
+                margin-top: 30px;
+            }
+
+            .e-p1 {
+                padding-left: 0;
+            }
+
+            .e-p2 {
+                padding-right: 0;
+            }            
+
+            #b { 
+            background-image:none;         
+        }
+        
+            .bbanner {
+                max-width: 100%;
+                display: flex;
+                flex-direction: column-reverse; 
+                justify-content: center;          
+            }
+
+            .b-text {
+                padding: 0;
+                width: 85%;
+                margin-bottom: 50px;
+            }
+
+            .video {
+                width: 100%;
+            }
+    }
+
+    </style>
+</head>
+<body>
+    <a href="#nav"><div class="fixed">TOP</div></a>
+    <div id="nav">
+        <div class="navbar">
+            <div class="container">
+                <div class="logo"></div>
+                <div class="mobile-toggle">
+                    <!-- 手機板按鈕 -->
+                <i class="fas fa-bars fa-2x"></i>
+            </div>
+            </div>
+        </div>
+
+        <div class="mobile_nav_links">
+            <!-- 手機版的選單,在這加上active -->
+            <div class="close_nav ">X</div>
+            <!-- 關掉選單的按鈕 -->
+            <ul>
+                <a href="#c"><li >故事概要</li></a><hr>
+                <a href="#e"><li>角色介紹</li></a><hr>
+                <a href="#a"><li>經典片段</li></a><hr>
+                <a href="#b"><li>電影預告</li></a><hr>
+            </ul>
+        </div>
+        <div class="banner">
+            <img src="img/maxresdefault.jpg" alt="">
+        </div>
+        <div class="bottom">
+            <div class="container display-flex justify-bt">
+                <a href="#c"><div class="btn letter-spacing">故事概要</div></a>
+                <a href="#e"><div class="btn letter-spacing">角色介紹</div></a>
+                <a href="#a"><div class="btn letter-spacing">經典片段</div></a>
+                <a href="#b"><div class="btn letter-spacing">電影預告</div></a>                 
+            </div>
+        </div>
+    </div>
+
+    <div id="c">
+        <div class="cbanner display-flex a-items-center">
+            <div class="container ">
+                <h1 class="title text-center">故事概要</h1>
+                <p class="c-p content text-justify">傑克·托倫斯是一名作家，為了擺脫工作上的失意，接受了一份在冬天維護科羅拉多州一家奢華的山間飯店的工作。他年幼的兒子擁有通靈能力，能夠看到過去和未來的東西，如棲息在飯店的鬼魂。到飯店安頓好後不久，這家人就被暴風雪困住了，傑克逐漸受到一個超自然的存在的影響；他陷入瘋狂並企圖謀殺他的妻子和兒子。
+                演員</p>
+            </div>            
+        </div>        
+    </div>
+
+    <div id="e">
+        <div class="ebanner display-flex a-items-center">
+            <div class="container ">
+                <div class="top ">
+                    <div class="ephoto" style="background-image: url(img/boy.webp);"></div>
+                    <p class="e-p1">丹尼托倫斯，傑克與溫蒂的兒子，相當的低調成熟，沒有一般小孩的頑皮，這也是父母擔心的原因，自從他被發怒的傑克折斷手臂後，他們兩人對待皆是小心翼翼，有很多事情都不會當他的面談，可是成熟的他不想要爸媽離婚。<br>丹尼有種特殊的能力,只是一般來說，他並不會透露，就是一種叫閃靈的預知能力，這個能力雖然能夠準確的預知以後發生的某些事情，可是卻要付出許多代價。<br>像是每到一個意識殘留相當濃的地方，他就會身受影響，並且被這股意識帶來的力量給右左，這股意識我們平常稱呼他為鬼魂，它們是強烈的情緒下留下來的意識，能夠讓人成為他們的夥伴，受到他們的干擾。</p>
+                </div>
+                <div class="down">
+                    <div class="ephoto" style="background-image: url(img/man.jpg);"></div>
+                    <p class="e-p2">傑克托倫斯原本是個前程似錦的教師，可是他長久以來的酗酒習慣，加上他的寫作路不順，與情緒問題讓他跟學生起了衝突後，就試圖殺死學生後被董事會解聘，原本將自己的正職視為寫作的他陷入生活困境中。<br><br>
+                    在酒友幫他找得一份在山上擔任全景飯店的管理員職務，
+                    傑克因為憤怒毀滅了一切，包括自己的婚姻與親子關係，他控制不了自己的情緒，還有酗酒加倍他的失控，他不只是傷害自己，還傷害別人
+                        
+                        </p>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+
+    <div id="a">
+        <div class=" a-photo left">
+            <p class="a-content ">"永遠被困在那而",是本片很重要的氛圍,而過去發生的事情也永遠存在,不會離開。《鬼店》裡面,人物不斷繞著,在室內男孩騎著小車子一次次繞過長廊,外頭則是每個轉角都很類似的迷宮花園。<br>永遠都在重複,去不到一個終點。恐怖237號房的設計與Jacku一家人住的房間類似,Jack與犯下謀殺妻案的CharlesGrady如鏡像,Danny看到得紅色redrum字樣其鏡面是murder,穿著藍色洋裝的雙胞胎總是一起出現,Danny的隱形朋友Tony住在Danny的嘴巴裡...在這裡,過去現在與未來似乎是並存的,歷史是重複的,像雙胞胎小女孩們說的,"請陪我玩,直到永遠"。</p>
+        </div>
+        <div class=" a-photo right">
+            <p class="a-content ">這是《鬼店》The Shining中經典的一幕，發狂的主角傑克尼克遜（Jack Nicholson）將妻子逼到旅館的浴室，並用斧頭劈開浴室的門。這一幕被公認為有史以來最令人害怕的電影片段之一，因為女主角絕望無助的情境和男主角中邪一般毫無來由的瘋狂。<br>這場戲最後花了整整三天的時間拍攝，用掉了高達60道門板。</p>
+        </div>
+    </div>
+
+    <div id="b">
+        <div class="container">
+            <div class=" bbanner">
+                <div class="video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/XgcblFIqnv4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="b-text">
+                    <h1>鬼店&nbspThe&nbspShining</h1>
+                    <p>「史上最偉大的恐怖片」、「影史最令人害怕的表演」等等評論，都證明了《鬼店》在電影史上的重要性。<br>改編自史蒂芬金的小說，史丹利庫柏力克(Stanley Kubrick)將恐怖電影推向心理驚悚與人性省思的最高層次，而影帝傑克尼克遜的完美演出，也將「傑克」這個角色刻劃入影史的最佳表演之一。上映超過36年的《鬼店》不僅恐怖元素歷久彌新，片中更有許多神祕符號與隱喻，都是影迷津津樂道的話題，高雄電影節將重新上映導演完整版本，再次體驗神祕驚悚的237號房。</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        var mobile_toggle = document.querySelector(".mobile-toggle"); //手機版的按鈕
+        var mobile_nav_links = document.querySelector(".mobile_nav_links"); //手機版的選單
+        var close_nav = document.querySelector(".close_nav"); //關掉選單的按鈕
+
+        mobile_toggle.addEventListener("click",function () {
+            //選單要打開
+
+            //加上class "active"
+            mobile_nav_links.classList.add("active");
+        });
+
+        close_nav.addEventListener("click",function(){
+            mobile_nav_links.classList.remove("active");
+        });
+
+    </script>
+</body>
+</html>

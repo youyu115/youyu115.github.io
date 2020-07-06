@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>youyuresume</title>
+    <link rel="stylesheet" href="./main.css">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+
+</head>
+<style>
+    /* 在SCSS裡蓋不過去 */
+    #skill .row .icon::after{
+            content: '';
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            background-color: #FCD880;
+            z-index: -1;
+        }
+    #skill .row2 .icon::after{
+            background-color: #C5D8D4;
+        }
+    /* TAB切換頁 */
+    #portfolio {
+        width: 100%;
+        max-width: 100%;
+        background-color: #C5D8D4;
+    }
+
+    #portfolio .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        padding: 100px 50px ;
+        box-sizing: border-box;
+    }
+
+    #portfolio .container h1 {
+        color: white;
+        position: relative;
+        letter-spacing: 5px;
+    }
+
+    #portfolio .container h1::before{
+        content: '';
+        width: 200px;
+        height: 15px;
+        background-color: #FCD880;
+        position: absolute;
+        top: -20px;
+    }
+    /* 按鈕 */
+    .tab_btns {
+        display: flex;
+        margin-top: 30px;
+    }
+    .tab_btns .tab_btn {
+        padding: 15px 20px;
+        background-color: #222;
+        margin-right: 10px;
+        color: white;
+        font-weight: bolder;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+
+    .tab_btn:hover {
+        background-color: #FCD880;
+        color: #222;
+    }
+
+
+    .tab_content {
+        display: none;
+        background-color: #FCD880;
+        padding: 20px;
+    }
+
+    .tab_content .item {
+        display: flex;
+    }
+
+    .tab_content .item .pic {
+        width: 50%;
+    }
+
+    .tab_content .item .pic img {
+        width: 100%;
+       height: 100%;
+    }
+
+    .tab_content .item .text {
+        width: 50%;
+        padding: 20px;      
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+
+    .btn-more {
+        padding: 10px;
+        background-color: #222;
+        color: white;
+        border-radius: 3px 5px;
+        font-size: 12px;
+        display: inline-block;
+        margin-top: 30px;
+        /* 按鈕 */
+    }
+
+    .tab_content.active {
+        display: block;
+        /* 不知道這行如何在SCSS裡寫,因此全部寫在style裡 */
+    }
+    @media screen and (max-width:900px) {
+        .tab_content .item {
+            display: unset;
+        }
+        .tab_content .item .text {
+            width: 100%;
+        }
+        .tab_content .item .pic {
+            width: 100%;
+        }
+        
+    }
+    @media screen and (max-width:400px) {
+        .tab_btns .tab_btn {
+            font-size: 12px;
+            padding: 5px 10px;
+        }
+    }
+
+
+
+</style>
+
+<body>
+
+    <div id="homepage">
+        <nav>
+            <div class="container">
+                <a href="#homepage">
+                    <div class="time">"YOUYU"</div>
+                </a>
+                <div class="nav_items">
+                    <ul>
+                        <a href="#about">
+                            <li>About</li>
+                        </a>
+                        <a href="#work_experience">
+                            <li>Experience</li>
+                        </a>
+                        <a href="#skill">
+                            <li>Skill</li>
+                        </a>
+                        <a href="#portfolio">
+                            <li>Portfolio</li>
+                        </a>
+                        <a href="#contact">
+                            <li>Contact</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="mobile-toggle">
+                    <!-- 手機板按鈕 -->
+                    <i class="fas fa-bars fa-2x"></i>
+                </div>
+            </div>
+            <div class="mobile_nav_links">
+                <!-- 手機版的選單,在這加上active -->
+                <div class="close_nav ">X</div>
+                <!-- 關掉選單的按鈕 -->
+                <ul>
+                    <a href="#homepage"><li >Homepage</li></a><hr>
+                    <a href="#about"><li >About</li></a><hr>
+                    <a href="#work_experience"><li>Experience</li></a><hr>
+                    <a href="#skill"><li>Skill</li></a><hr>
+                    <a href="#portfolio"><li>Portfolio</li></a><hr>
+                    <a href="#contact"><li>Contact</li></a><hr>
+                </ul>
+            </div>
+        </nav>
+        
+
+        <div class="banner">
+            <div class="title">
+                <div class="title_animation">
+                    <div class="wavy">
+                        <span style="--i:1">H</span>
+                        <span style="--i:2">E</span>
+                        <span style="--i:3">L</span>
+                        <span style="--i:4">L</span>
+                        <span style="--i:5">
+                            <i class="fa fa-smile-o" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <h3>" My &nbsp;&nbsp; name &nbsp;&nbsp; is &nbsp;&nbsp; YouYu "</h3>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="headshot">
+                <img src="./img/headshot/youpic-8.png" alt="">
+            </div>
+            <!-- 大頭照 -->
+            <div class="content">
+                <h1>About&nbsp;&nbsp;ME</h1>
+                <hr>
+                <div class="name">
+                    <img src="./img/NAME-8.png" alt="">
+                </div>
+                <div class="headshot-sm">
+                    <img src="./img/headshot/youpic-sm.png" alt="">
+                </div>
+                <ul>
+                    <li>Birthday : 1993 / JAN / 15</li>
+                    <li>台中科技大學 - 商業設計系</li>
+                </ul>
+                <p>我是一個有想法的人,樂觀正面是大家對我的形容,我喜歡追求美的事物,更樂於
+                    接觸不同領域,多接觸多觀察,便能在設計中碰撞出更多的想法
+                    在工作中要求完美,認為要做就要做到最好,可能是加上魔羯座的固執,時常讓自己
+                    三更半夜才肯睡覺,但卻始終熱愛這個行業<br><br>
+                    “設計”是件很有影響力的事,一個好的設計,能讓人多停留幾秒,就能多傳達我們
+                    想傳達的事,而一開始的初衷,就是希望能多帶給這讓人喘不過氣的社會,一個溫暖
+                    又正向的出口</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="work_experience">
+        <div class="container">
+            <div class="work-context">
+                <h1>" Work Experience</h1>
+                <ul>
+                    <li>
+                        <div class="first-work">
+                            <div class="title">My Bag 得意時袋 - 網路客服 / 美編助理</div>
+                            <h5>2015/03~2016/09</h5>
+                            <p>工作內容：網路客服出貨,平台維護,撰寫文案,商品圖修圖與製作banner</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="second-work">
+                            <div class="title">愛婚禮喜帖 - 喜帖設計</div>
+                            <h5>2016/10~2017/04</h5>
+                            <p>工作內容：定期設計新款喜帖與簽名綢</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="timeline">
+        <div class="container">
+            <h1>"&nbsp;My&nbsp;Timeline&nbsp;&nbsp;&nbsp;</h1>
+            <!-- 中間垂直線 -->
+            <hr noshade width="2" size="900" color="#333">
+            <div class="items">
+                <div class="item">
+                    <div class="circle"></div>
+                    <div class="content">
+                        <h5>2016</h5>
+                        <h2>畢業於台中科技大學-商業設計系</h1>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="circle"></div>
+                    <div class="content">
+                        <h5>2017</h5>
+                        <h2>開始第一年的澳洲打工之旅</h1>
+                    </div>
+                </div>
+                <!-- 菲律賓內容 -->
+                <p class="p1">"發現自己的語言能力不足,希望能提升自己外語能力與更多外國朋友交流,也能讓自己在工作部分更得心應手</p>
+                <div class="item">
+                    <div class="circle"></div>
+                    <div class="content">
+                        <h5>2018 - 06月~09月</h5>
+                        <h2>菲律賓提升自我外語能力</h1>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="circle"></div>
+                    <div class="content">
+                        <h5>2018</h5>
+                        <h2>第二年澳洲打工度假</h1>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="circle"></div>
+                    <div class="content">
+                        <h5>2020 - 02</h5>
+                        <h2>參加職訓局ＲＷＤ前端課程</h1>
+                    </div>
+                </div>
+                <!-- 職訓局內容 -->
+                <p class="p2">"雖然只有短短三個月的課程,但課程設計的很完整,讓我們從設計到企劃再到網站wirefram與程式架構,一步一步的把基礎打穩,讓我們能快速的進入職場
+                </p>
+            </div>
+        </div>
+        <div class="timeline-banner">
+            <div class="title">
+                <h3> "不要當個總是在後悔的人
+                    <br>因為每段經歷都推著我們成為更大的巨人"</h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="skill">
+        <div class="container">
+            <h1>SKILL</h1>
+            <!-- 平面設計軟體 -->
+            <div class="row row1">
+                <div class="col">
+                    <div class="icon">PH</div>
+                    <hr noshade width="1.5" size="40" color="black">
+                    <div class="cicle"></div>
+                    <h3>Photoshop</h3>
+                    <span>照片合成 / 修圖</span>
+                </div>
+                <div class="col">
+                    <div class="icon">AI</div>
+                    <hr noshade width="1.5" size="40" color="black">
+                    <div class="cicle"></div>
+                    <h3>Illustrator</h3>
+                    <span>LOGO/名片/海報/包裝設計</span>
+                </div>
+            </div>
+            <!-- 網頁開發工具 -->
+            <div class="row row2">
+                <div class="col">
+                    <div class="icon">
+                        <img src="./img/icon/htmlcss.png" alt="">
+                    </div>
+                    <hr noshade width="1.5" size="40" color="black">
+                    <div class="cicle"></div>
+                    <h3>HTML / CSS</h3>
+                    <span>基礎語法架構與網頁樣式</span>
+                </div>
+                <div class="col">
+                    <div class="icon">
+                        <img src="./img/icon/js.png" alt="">
+                    </div>
+                    <hr noshade width="1.5" size="40" color="black">
+                    <div class="cicle"></div>
+                    <h3>JavaScript</h3>
+                    <span>基礎函式/事件/API串接</span>
+                </div>
+                <div class="col">
+                    <div class="icon">
+                        <img src="./img/icon/bootstrap-8.png" alt="">
+                    </div>
+                    <hr noshade width="1.5" size="40" color="black">
+                    <div class="cicle"></div>
+                    <h3>Bootstrap</h3>
+                    <span>運用Bootstra製作基本RWD一頁式網站</span>
+                </div>
+                <div class="col">
+                    <div class="icon SCSS">SCSS</div>
+                    <hr noshade width="1.5" size="40" color="black">
+                    <div class="cicle"></div>
+                    <h3>SCSS</h3>
+                    <span>透過styleguild方便管理整個網頁樣式</span>
+                </div>
+                <div class="col">
+                    <div class="icon RWD">RWD</div>
+                    <hr noshade width="1.5" size="40" color="black">
+                    <div class="cicle"></div>
+                    <h3>RWD</h3>
+                    <span>響應任何像素尺寸裝置</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="portfolio">
+        <div class="container">
+            <h1>Portfolio</h1>
+            <div class="tab_btns">
+                <div class="tab_btn">Graphic Design</div>
+                <div class="tab_btn">Web Project</div>
+                <div class="tab_btn">One Page</div>
+                <div class="tab_btn">API</div>
+            </div>
+            <div class="tab_contents">
+                <!-- 內容01 -->
+                <div class="tab_content active">
+                    <!-- 多包一層item,為了可以使用display-block,在tab_content用active -->
+                    <div class="item">
+                        <!-- 照片 -->
+                    <div class="pic">
+                        <img src="./img/Portfolio-pic/Portfolio.jpg" alt="">
+                    </div>
+                    <!-- 文字 -->
+                    <div class="text">
+                        <h2>平面設計</h2>
+                        <h4>Graphic Design</h4>
+                        <br>
+                        <p>Matte Painting影像合成/名片設計/插畫創作發想</p>
+                        <a href="./page-pagination-Graphic/swipe.html" target="black">
+                            <div class="btn-more">MORE</div>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+                <!-- 內容02 -->
+                <div class="tab_content ">
+                    <!-- 多包一層item,為了可以使用display-block,在tab_content用active -->
+                    <div class="item">
+                        <!-- 照片 -->
+                    <div class="pic">
+                        <img src="./img/Portfolio-pic/Portfolio-web.jpg" alt="">
+                    </div>
+                    <!-- 文字 -->
+                    <div class="text">
+                        <h2>網頁專案練習</h2>
+                        <h4>Graphic Design</h4>
+                        <br>
+                        <p>在這裡每個人都可透過瑜珈,從身到心,動與靜,新與舊之間找到一個專屬自己的平衡位置,從一開始的網站地圖/wireframe/設計稿/再到網站架構與程式,一步一步建造出來</p>
+                        <a href="./page-pagination-yoga/personal-project.html" target="black">
+                            <div class="btn-more">MORE</div>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+                <!-- 內容03 -->
+                <div class="tab_content ">
+                    <!-- 多包一層item,為了可以使用display-block,在tab_content用active -->
+                    <div class="item">
+                        <!-- 照片 -->
+                    <div class="pic">
+                        <img src="./img/Portfolio-pic/Portfolio-movie.jpg" alt="">
+                    </div>
+                    <!-- 文字 -->
+                    <div class="text">
+                        <h2>W看電影 - 鬼店</h2>
+                        <h4>基本網站架構練習</h4><br>
+                        <p>透過HTML/CSS切出基本網站架構與樣式,在使用JS click事件做出手機尺寸的收合選單</p>
+                        <a href="./page-pagination-movie/onepage.html" target="black">
+                            <div class="btn-more">MORE</div>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+                <!-- 內容04 -->
+                <div class="tab_content ">
+                    <!-- 多包一層item,為了可以使用display-block,在tab_content用active -->
+                    <div class="item">
+                        <!-- 照片 -->
+                    <div class="pic">
+                        <img src="./img/Portfolio-pic/weatherpic.jpg" alt="">
+                    </div>
+                    <!-- 文字 -->
+                    <div class="text">
+                        <h2>天氣卡片API串接</h2>
+                        <h4>基礎API練習</h4><br>
+                        <p>天氣預報是許多人出門必看的資訊,透過簡單的API串接,更新每天的氣象資訊</p>
+                        <a href="./page-pagination-API/weatherCards.html" target="black">
+                            <div class="btn-more">MORE</div>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <h1>Contact</h1>
+            <div class="items">
+                <div class="item">
+                    <div class="icon">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                    </div>
+                    <div class="title">Phone</div>
+                    <h5>0982-199-352</h5>
+                </div>
+                <div class="item">
+                    <div class="icon">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </div>
+                    <div class="title">E-mail</div>
+                    <h5>qwert8215asd@gmail.com</h5>
+                </div>
+                <div class="item">
+                    <div class="icon">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                    </div>
+                    <div class="title">Adress</div>
+                    <h5>台中市北區大德街84巷</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <h6>Copyright © 2020 youyu
+        </h6>
+    </div>
+
+
+    <!-- Fontawesome -->
+    <script src="https://use.fontawesome.com/ff7eea4f41.js"></script>
+
+    <script>
+        var mobile_toggle = document.querySelector(".mobile-toggle"); //手機版的按鈕
+        var mobile_nav_links = document.querySelector(".mobile_nav_links"); //手機版的選單
+        var close_nav = document.querySelector(".close_nav"); //關掉選單的按鈕
+
+        mobile_toggle.addEventListener("click",function () {
+            //選單要打開
+
+            //加上class "active"
+            mobile_nav_links.classList.add("active");
+        });
+
+        close_nav.addEventListener("click",function(){
+            mobile_nav_links.classList.remove("active");
+        });
+
+    </script>
+
+    <script>
+        // 01先抓出對誰
+        var tab_btns = document.querySelectorAll('.tab_btn')
+        
+        var tab_contents = document.querySelectorAll('.tab_content')
+
+        // 02把陣列裡面每個element抓出來
+        for (let index = 0; index < tab_btns.length; index++) {
+            const element = tab_btns[index];
+            // console.log(element);  
+
+            element.addEventListener("click",function() {
+                // 1.知道是按了哪一個按鈕
+                console.log(index);
+                // 2.拿掉所有人的active(再寫刪除函式)
+                remove_all_active()
+                // 3.再加上自己的active
+                tab_contents[index].classList.add('active');
+            })
+
+        }
+
+        // 03寫click事件
+        
+        function remove_all_active() {
+            for (let index = 0; index < tab_contents.length; index++) {
+                const element = tab_contents[index];
+                element.classList.remove('active');  
+            }
+        }
+    </script>
+    
+</body>
+
+</html>

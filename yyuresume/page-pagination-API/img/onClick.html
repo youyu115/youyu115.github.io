@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: palevioletred;
+            font-size: 50px;
+            /* 先把按鈕樣式做出來 */         
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* 水平垂直置中 */
+        }
+
+        .btn.active {
+            transition: rotate(45deg);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="btn" >
+        <span>+</span>
+    </div>
+
+    <script>
+
+        var btn = document.querySelector('.btn')
+
+        btn.onclick = function() {
+            if(btn.getAttribute('class') == 'btn'){
+                btn.classList.add('active')
+            }else{
+                btn.classList.remove('active')
+            }
+        }        
+
+
+    </script>
+</body>
+</html>
