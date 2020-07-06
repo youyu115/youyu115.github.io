@@ -642,6 +642,12 @@ html {
   opacity: 1;
 }
 
+@media screen and (max-width: 420px) {
+  #skill .container .row .col span {
+    opacity: 1;
+  }
+}
+
 #skill .container .row2 .icon img {
   width: 60px;
   margin: 15px;
