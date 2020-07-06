@@ -202,6 +202,7 @@ html {
   margin-top: 60px;
   text-align: center;
   letter-spacing: 3px;
+  line-height: 40px;
   font-weight: 100;
 }
 
@@ -526,8 +527,14 @@ html {
   #timeline .container .items .item:nth-last-child(4) {
     margin-bottom: 120px;
   }
+  #timeline .container .items .item h2 {
+    font-size: 23px;
+  }
   #timeline .container .items .p1 {
-    top: 250px;
+    top: 225px;
+  }
+  #timeline .container .items .p2 {
+    top: 480px;
   }
 }
 

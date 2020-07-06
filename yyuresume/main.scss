@@ -159,10 +159,9 @@ html {
                 margin-top: 60px;
                 text-align: center;
                 letter-spacing: 3px;
+                line-height: 40px;
                 font-weight: 100;
             }
-
-
         }
     } 
 }
@@ -322,8 +321,6 @@ html {
     }
 }
 
-
-
 #timeline {
     width: 100%;
     max-width: 100%;
@@ -447,9 +444,15 @@ html {
                     &:nth-last-child(4){
                         margin-bottom: 120px;
                     }
+                    h2 {
+                        font-size: 23px;
+                    }
                 }
                 .p1 {
-                    top: 250px;
+                    top: 225px;
+                }
+                .p2 {
+                    top: 480px;
                 }
             }
         }
