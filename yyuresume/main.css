@@ -191,7 +191,7 @@ html {
   }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 460px) {
   #homepage .banner .title .title_animation .wavy span {
     font-size: 2em;
   }
@@ -293,6 +293,12 @@ html {
   font-family: 微軟正黑體;
 }
 
+@media screen and (max-width: 395px) {
+  #about .container .content ul li {
+    font-size: 18px;
+  }
+}
+
 @media screen and (max-width: 1180px) {
   #about .container .content ul {
     margin: 10px 0 15px 0;
@@ -314,15 +320,15 @@ html {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 650px) {
   #about .container {
-    padding: 10px;
+    padding: 30px;
   }
 }
 
 @media screen and (max-width: 500px) {
   #about {
-    padding: 0;
+    padding: 20px;
   }
 }
 
@@ -337,6 +343,7 @@ html {
 
 #work_experience .container {
   max-width: 100%;
+  height: 100%;
   padding: 80px 100px;
   background-color: rgba(0, 0, 0, 0.6);
 }
@@ -377,6 +384,12 @@ html {
 @media screen and (max-width: 420px) {
   #work_experience .title {
     font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #work_experience .container {
+    padding: 15px;
   }
 }
 
@@ -421,7 +434,7 @@ html {
   z-index: -1;
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 550px) {
   #timeline .container h1::after {
     width: 300px;
   }
@@ -507,6 +520,10 @@ html {
   #timeline .container .items .item:nth-last-child(4) {
     margin-bottom: 180px;
   }
+  #timeline .container .items .item .circle {
+    width: 20px;
+    height: 20px;
+  }
   #timeline .container .items .p1 {
     left: 50px;
     top: 280px;
@@ -517,7 +534,7 @@ html {
   }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 460px) {
   #timeline .container .items {
     left: 5%;
   }
@@ -535,6 +552,24 @@ html {
   }
   #timeline .container .items .p2 {
     top: 480px;
+  }
+}
+
+@media screen and (max-width: 395px) {
+  #timeline .container .items .item .circle {
+    width: 10px;
+    height: 10px;
+  }
+  #timeline .container .items .item h2 {
+    font-size: 20px;
+  }
+  #timeline .container .items .p1 {
+    left: 35px;
+    top: 220px;
+  }
+  #timeline .container .items .p2 {
+    left: 35px;
+    top: 460px;
   }
 }
 
@@ -622,6 +657,16 @@ html {
   position: relative;
 }
 
+#skill .container .row .col .icon::after {
+  content: '';
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  z-index: -1;
+}
+
 #skill .container .row .col hr {
   margin: auto;
   margin: 0;
@@ -655,9 +700,19 @@ html {
   }
 }
 
+#skill .container .row1 .icon::after {
+  content: '';
+  background-color: #FCD880;
+}
+
 #skill .container .row2 .icon img {
   width: 60px;
   margin: 15px;
+}
+
+#skill .container .row2 .icon::after {
+  content: '';
+  background-color: #C5D8D4;
 }
 
 @media screen and (max-width: 800px) {
@@ -674,6 +729,142 @@ html {
   #skill .row .col {
     margin-right: 0;
     margin: 20px 10px;
+  }
+}
+
+/* TAB切換頁 */
+#portfolio {
+  width: 100%;
+  max-width: 100%;
+  background-color: #C5D8D4;
+}
+
+#portfolio .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 100px 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#portfolio .container h1 {
+  color: white;
+  position: relative;
+  letter-spacing: 5px;
+}
+
+#portfolio .container h1::before {
+  content: '';
+  width: 200px;
+  height: 15px;
+  background-color: #FCD880;
+  position: absolute;
+  top: -20px;
+}
+
+#portfolio .container .tab_btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 30px;
+}
+
+#portfolio .container .tab_btns .tab_btn {
+  padding: 15px 20px;
+  background-color: #222;
+  margin-right: 10px;
+  color: white;
+  font-weight: bolder;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+#portfolio .container .tab_btns .tab_btn:hover {
+  background-color: #FCD880;
+  color: #222;
+}
+
+@media screen and (max-width: 600px) {
+  #portfolio .container .tab_btns .tab_btn {
+    font-size: 16px;
+    padding: 10px 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #portfolio .container .tab_btns .tab_btn {
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+}
+
+#portfolio .container .tab_contents .tab_content {
+  display: none;
+  background-color: #FCD880;
+  padding: 20px;
+}
+
+#portfolio .container .tab_contents .tab_content.active {
+  display: block;
+}
+
+#portfolio .container .tab_contents .tab_content .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#portfolio .container .tab_contents .tab_content .item .pic {
+  width: 50%;
+}
+
+#portfolio .container .tab_contents .tab_content .item .pic img {
+  width: 100%;
+  height: 100%;
+}
+
+#portfolio .container .tab_contents .tab_content .item .text {
+  width: 50%;
+  padding: 20px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#portfolio .container .tab_contents .tab_content .item .text .btn-more {
+  padding: 10px;
+  background-color: #222;
+  color: white;
+  border-radius: 3px 5px;
+  font-size: 12px;
+  display: inline-block;
+  margin-top: 30px;
+  /* 按鈕 */
+}
+
+@media screen and (max-width: 900px) {
+  #portfolio .container .tab_contents .tab_content .item {
+    display: unset;
+  }
+  #portfolio .container .tab_contents .tab_content .item .text {
+    width: 100%;
+  }
+  #portfolio .container .tab_contents .tab_content .item .pic {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #portfolio .container {
+    padding: 80px 20px;
   }
 }
 

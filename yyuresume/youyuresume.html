@@ -14,137 +14,6 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 
 </head>
-<style>
-    /* 在SCSS裡蓋不過去 */
-    #skill .row .icon::after{
-            content: '';
-            width: 100px;
-            height: 100px;
-            position: absolute;
-            top: -15px;
-            right: -15px;
-            background-color: #FCD880;
-            z-index: -1;
-        }
-    #skill .row2 .icon::after{
-            background-color: #C5D8D4;
-        }
-    /* TAB切換頁 */
-    #portfolio {
-        width: 100%;
-        max-width: 100%;
-        background-color: #C5D8D4;
-    }
-
-    #portfolio .container {
-        width: 100%;
-        max-width: 1200px;
-        margin: auto;
-        padding: 100px 50px ;
-        box-sizing: border-box;
-    }
-
-    #portfolio .container h1 {
-        color: white;
-        position: relative;
-        letter-spacing: 5px;
-    }
-
-    #portfolio .container h1::before{
-        content: '';
-        width: 200px;
-        height: 15px;
-        background-color: #FCD880;
-        position: absolute;
-        top: -20px;
-    }
-    /* 按鈕 */
-    .tab_btns {
-        display: flex;
-        margin-top: 30px;
-    }
-    .tab_btns .tab_btn {
-        padding: 15px 20px;
-        background-color: #222;
-        margin-right: 10px;
-        color: white;
-        font-weight: bolder;
-        border-top-right-radius: 10px;
-        border-top-left-radius: 10px;
-    }
-
-    .tab_btn:hover {
-        background-color: #FCD880;
-        color: #222;
-    }
-
-
-    .tab_content {
-        display: none;
-        background-color: #FCD880;
-        padding: 20px;
-    }
-
-    .tab_content .item {
-        display: flex;
-    }
-
-    .tab_content .item .pic {
-        width: 50%;
-    }
-
-    .tab_content .item .pic img {
-        width: 100%;
-       height: 100%;
-    }
-
-    .tab_content .item .text {
-        width: 50%;
-        padding: 20px;      
-        background-color: white;
-        display: flex;
-        flex-direction: column;
-        box-sizing: border-box;
-    }
-
-    .btn-more {
-        padding: 10px;
-        background-color: #222;
-        color: white;
-        border-radius: 3px 5px;
-        font-size: 12px;
-        display: inline-block;
-        margin-top: 30px;
-        /* 按鈕 */
-    }
-
-    .tab_content.active {
-        display: block;
-        /* 不知道這行如何在SCSS裡寫,因此全部寫在style裡 */
-    }
-    @media screen and (max-width:900px) {
-        .tab_content .item {
-            display: unset;
-        }
-        .tab_content .item .text {
-            width: 100%;
-        }
-        .tab_content .item .pic {
-            width: 100%;
-        }
-        
-    }
-    @media screen and (max-width:420px) {
-        .tab_btns .tab_btn {
-            font-size: 12px;
-            padding: 5px 10px;
-        }
-    }
-
-
-
-</style>
-
 <body>
 
     <div id="homepage">
@@ -232,13 +101,8 @@
                     <li>Birthday : 1993 / JAN / 15</li>
                     <li>台中科技大學 - 商業設計系</li>
                 </ul>
-                <p>我是一個有想法的人,樂觀正面是大家對我的形容,我喜歡追求美的事物,更樂於
-                    接觸不同領域,多接觸多觀察,便能在設計中碰撞出更多的想法
-                    在工作中要求完美,認為要做就要做到最好,可能是加上魔羯座的固執,時常讓自己
-                    三更半夜才肯睡覺,但卻始終熱愛這個行業<br><br>
-                    “設計”是件很有影響力的事,一個好的設計,能讓人多停留幾秒,就能多傳達我們
-                    想傳達的事,而一開始的初衷,就是希望能多帶給這讓人喘不過氣的社會,一個溫暖
-                    又正向的出口</p>
+                <p>我是一個有想法的人,樂觀正面是大家對我的形容,我喜歡追求美的事物,更樂於接觸不同領域,多接觸多觀察,便能在設計中碰撞出更多的想法!在工作中要求完美,認為要做就要做到最好,可能是加上魔羯座的固執,時常讓自己三更半夜才肯睡覺,但卻始終熱愛這個行業<br><br>
+                “設計”是件很有影響力的事,一個好的設計,能讓人多停留幾秒,就能多傳達我們想傳達的事,而一開始的初衷,就是希望能多帶給這讓人喘不過氣的社會,一個溫暖又正向的出口</p>
             </div>
         </div>
 
@@ -251,7 +115,7 @@
                 <ul>
                     <li>
                         <div class="first-work">
-                            <div class="title">My Bag 得意時袋 - 網路客服 / 美編助理</div>
+                            <div class="title">My Bag得意時袋 - 網路客服 / 美編助理</div>
                             <h5>2015/03~2016/09</h5>
                             <p>工作內容：網路客服出貨,平台維護,撰寫文案,商品圖修圖與製作banner</p>
                         </div>
@@ -507,7 +371,7 @@
                         <i class="fa fa-home" aria-hidden="true"></i>
                     </div>
                     <div class="title">Adress</div>
-                    <h5>台中市北區大德街84巷</h5>
+                    <h5>台中市北區大德街</h5>
                 </div>
             </div>
         </div>
@@ -529,7 +393,6 @@
 
         mobile_toggle.addEventListener("click",function () {
             //選單要打開
-
             //加上class "active"
             mobile_nav_links.classList.add("active");
         });
@@ -537,9 +400,8 @@
         close_nav.addEventListener("click",function(){
             mobile_nav_links.classList.remove("active");
         });
-
     </script>
-
+    <!-- TAB分頁 -->
     <script>
         // 01先抓出對誰
         var tab_btns = document.querySelectorAll('.tab_btn')
@@ -559,11 +421,9 @@
                 // 3.再加上自己的active
                 tab_contents[index].classList.add('active');
             })
-
         }
 
         // 03寫click事件
-        
         function remove_all_active() {
             for (let index = 0; index < tab_contents.length; index++) {
                 const element = tab_contents[index];
