@@ -48,6 +48,28 @@
         .location {
             text-align: center;
         }
+
+        @media screen and (max-width:850px) {
+            .cards {
+                margin: 50px;
+            }
+            .cards .card {
+                width: calc((100% - 60px) / 3); 
+            } 
+        }
+        @media screen and (max-width:500px) {
+            .cards .card {
+                width: calc((100% - 40px) / 2);
+            } 
+        }
+        @media screen and (max-width:420px){
+            .cards {
+                margin: 30px;
+            }
+            .cards .card {
+                width:100%; 
+            } 
+        }
     </Style>
 </head>
 
