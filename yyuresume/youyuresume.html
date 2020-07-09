@@ -17,6 +17,9 @@
 <body>
 
     <div id="homepage">
+        <a href="#homepage"><div class="backtotop">
+            <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+        </div></a>
         <nav>
             <div class="container">
                 <a href="#homepage">
@@ -113,14 +116,14 @@
             <div class="work-context">
                 <h1>" Work Experience</h1>
                 <ul>
-                    <li>
-                        <div class="first-work">
+                    <li data-aos="fade-left" data-aos-delay="300">
+                        <div class="first-work" >
                             <div class="title">My Bag得意時袋 - 網路客服 / 美編助理</div>
                             <h5>2015/03~2016/09</h5>
                             <p>工作內容：網路客服出貨,平台維護,撰寫文案,商品圖修圖與製作banner</p>
                         </div>
                     </li>
-                    <li>
+                    <li data-aos="fade-left" data-aos-delay="500">
                         <div class="second-work">
                             <div class="title">愛婚禮喜帖 - 喜帖設計</div>
                             <h5>2016/10~2017/04</h5>
@@ -138,45 +141,45 @@
             <!-- 中間垂直線 -->
             <hr noshade width="2" size="900" color="#333">
             <div class="items">
-                <div class="item">
+                <div class="item" data-aos="fade-up" data-aos-delay="100">
                     <div class="circle"></div>
-                    <div class="content">
+                    <div class="content" >
                         <h5>2016</h5>
                         <h2>畢業於台中科技大學-商業設計系</h1>
                     </div>
                 </div>
-                <div class="item">
+                <div class="item" data-aos="fade-up" data-aos-delay="200">
                     <div class="circle"></div>
-                    <div class="content">
+                    <div class="content" >
                         <h5>2017</h5>
                         <h2>開始第一年的澳洲打工之旅</h1>
                     </div>
                 </div>
                 <!-- 菲律賓內容 -->
-                <p class="p1">"發現自己的語言能力不足,希望能提升自己外語能力與更多外國朋友交流,也能讓自己在工作部分更得心應手</p>
-                <div class="item">
+                <p class="p1" data-aos="fade-up" data-aos-delay="300">"發現自己的語言能力不足,希望能提升自己外語能力與更多外國朋友交流,也能讓自己在工作部分更得心應手</p>
+                <div class="item" data-aos="fade-up" data-aos-delay="300">
                     <div class="circle"></div>
-                    <div class="content">
+                    <div class="content" >
                         <h5>2018 - 06月~09月</h5>
                         <h2>菲律賓提升自我外語能力</h1>
                     </div>
                 </div>
-                <div class="item">
+                <div class="item" data-aos="fade-up" data-aos-delay="400">
                     <div class="circle"></div>
-                    <div class="content">
+                    <div class="content" >
                         <h5>2018</h5>
                         <h2>第二年澳洲打工度假</h1>
                     </div>
                 </div>
-                <div class="item">
+                <div class="item" data-aos="fade-up" data-aos-delay="500">
                     <div class="circle"></div>
-                    <div class="content">
+                    <div class="content" >
                         <h5>2020 - 02</h5>
                         <h2>參加職訓局ＲＷＤ前端課程</h1>
                     </div>
                 </div>
                 <!-- 職訓局內容 -->
-                <p class="p2">"雖然只有短短三個月的課程,但課程設計的很完整,讓我們從設計到企劃再到網站wirefram與程式架構,一步一步的把基礎打穩,讓我們能快速的進入職場
+                <p class="p2" data-aos="fade-up" data-aos-delay="600">"雖然只有短短三個月的課程,但課程設計的很完整,讓我們從設計到企劃再到網站wirefram與程式架構,一步一步的把基礎打穩,讓我們能快速的進入職場
                 </p>
             </div>
         </div>
@@ -270,19 +273,19 @@
                     <!-- 多包一層item,為了可以使用display-block,在tab_content用active -->
                     <div class="item">
                         <!-- 照片 -->
-                    <div class="pic">
-                        <img src="./img/Portfolio-pic/Portfolio.jpg" alt="">
-                    </div>
-                    <!-- 文字 -->
-                    <div class="text">
-                        <h2>平面設計</h2>
-                        <h4>Graphic Design</h4>
-                        <br>
-                        <p>Matte Painting影像合成/名片設計/插畫創作發想</p>
-                        <a href="./page-pagination-Graphic/swipe.html" target="black">
-                            <div class="btn-more">MORE</div>
-                        </a>
-                    </div>
+                        <div class="pic">
+                            <img src="./img/Portfolio-pic/Portfolio.jpg" alt="">
+                        </div>
+                        <!-- 文字 -->
+                        <div class="text">
+                            <h2>平面設計</h2>
+                            <h4>Graphic Design</h4>
+                            <br>
+                            <p>Matte Painting影像合成/名片設計/插畫創作發想</p>
+                            <a href="./page-pagination-Graphic/swipe.html" target="black">
+                                <div class="btn-more">MORE</div>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <!-- 內容02 -->
@@ -385,6 +388,13 @@
 
     <!-- Fontawesome -->
     <script src="https://use.fontawesome.com/ff7eea4f41.js"></script>
+
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+    AOS.init({
+        offset:30,
+    });  </script>  
 
     <script>
         var mobile_toggle = document.querySelector(".mobile-toggle"); //手機版的按鈕
