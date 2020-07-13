@@ -17,7 +17,7 @@
 <body>
 
     <div id="homepage">
-        <a href="#homepage"><div class="backtotop">
+        <a href="#homepage" ><div class="backtotop" hidden>
             <i class="fa fa-angle-double-up" aria-hidden="true"></i>
         </div></a>
         <nav>
@@ -405,6 +405,7 @@
     <script>
         $(window).scroll(function(){
             var scrollVal = $(this).scrollTop();
+            console.log(scrollVal)
 
             if (scrollVal >= 500) {
                 $('.backtotop').show()
